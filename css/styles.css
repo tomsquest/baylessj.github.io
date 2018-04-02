@@ -55,6 +55,14 @@ main > .tagline {
 	font-weight: 100;
 }
 
+main > .tagline a, a:visited, a:active {
+  color: #AF3D4E;
+}
+
+main > .tagline a:hover {
+  color: #222222;
+}
+
 .icons-social i {
 	padding: 10px;
 }
