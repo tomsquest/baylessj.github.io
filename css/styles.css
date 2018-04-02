@@ -56,11 +56,12 @@ main > .tagline {
 }
 
 main > .tagline a, a:visited, a:active {
-  color: #AF3D4E;
+  /* color: #32a89c; */
+  color: #1aa597;
 }
 
 main > .tagline a:hover {
-  color: #222222;
+  color: #35baad;
 }
 
 .icons-social i {
