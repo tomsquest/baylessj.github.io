@@ -23,23 +23,22 @@ main {
   flex-direction: column;
   min-height: 100vh;
   justify-content: center;
-  padding: 0 30px;
   text-align: center; }
 
-main > .intro {
+.intro {
   font-family: 'Reem Kufi', sans-serif;
   font-size: 6rem;
   font-weight: 600; }
 
-main > .tagline {
+.tagline {
   font-size: 2rem;
   margin: 1.5rem 0;
   font-weight: 100; }
 
-main > .tagline a, a:visited, a:active {
+.tagline a, a:visited, a:active {
   color: #1aa597; }
 
-main > .tagline a:hover {
+.tagline a:hover {
   color: #35baad; }
 
 .icons-social i {
@@ -65,6 +64,25 @@ main {
 .icons-social a svg path {
   fill: #AF3D4E; }
 
+.card-main {
+  background: #fff;
+  border-radius: 4px;
+  width: 90vw;
+  margin: auto; }
+
+.card-resume {
+  background: #fff;
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin: 0 auto auto auto; }
+
+.card-icon {
+  display: inline-block;
+  background: #fff;
+  border-radius: 4px;
+  padding: .5rem;
+  margin: auto 2rem 4rem 2rem; }
+
 /* Minimal CSS Reset */
 html {
   box-sizing: border-box;
@@ -84,5 +102,24 @@ ol, ul {
 img {
   max-width: 100%;
   height: auto; }
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.card-2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+.card-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+
+.card-4 {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.card-5 {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
 
 /*# sourceMappingURL=main.css.map */

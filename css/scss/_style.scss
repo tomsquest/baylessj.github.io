@@ -41,27 +41,27 @@ main {
 	flex-direction: column;
 	min-height: 100vh;
 	justify-content: center;
-	padding: 0 30px;
+	// padding: 0 30px;
 	text-align: center;
 }
 
-main > .intro {
+.intro {
 	font-family: 'Reem Kufi', sans-serif;
 	font-size: 6rem;
 	font-weight: 600;
 }
 
-main > .tagline {
+.tagline {
 	font-size: 2rem;
 	margin: 1.5rem 0;
 	font-weight: 100;
 }
 
-main > .tagline a, a:visited, a:active {
+.tagline a, a:visited, a:active {
   color: #1aa597;
 }
 
-main > .tagline a:hover {
+.tagline a:hover {
   color: #35baad;
 }
 
@@ -92,4 +92,26 @@ main {
 
 .icons-social a svg path{
 	fill: #AF3D4E;
+}
+
+.card-main {
+  background: #fff;
+  border-radius: 4px;
+  width: 90vw;
+  margin: auto;
+}
+
+.card-resume {
+  background: #fff;
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin: 0 auto auto auto;
+}
+
+.card-icon {
+  display: inline-block;
+  background: #fff;
+  border-radius: 4px;
+  padding: .5rem;
+  margin: auto 2rem 4rem 2rem;
 }
