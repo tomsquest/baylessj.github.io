@@ -36,7 +36,9 @@ main {
   font-weight: 100; }
 
 .tagline a, a:visited, a:active {
-  color: #1aa597; }
+  color: #1aa597;
+  font-weight: 800;
+  font-size: 2.5rem; }
 
 .tagline a:hover {
   color: #35baad; }
@@ -75,6 +77,9 @@ main {
   border-radius: 4px;
   padding: 1.5rem;
   margin: 0 auto auto auto; }
+
+.card-resume i {
+  margin: 1rem auto auto auto; }
 
 .card-icon {
   display: inline-block;
