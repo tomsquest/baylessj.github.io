@@ -23,7 +23,8 @@ main {
   flex-direction: column;
   min-height: 100vh;
   justify-content: center;
-  text-align: center; }
+  text-align: center;
+  z-index: 0; }
 
 .intro {
   font-family: 'Reem Kufi', sans-serif;
@@ -36,12 +37,12 @@ main {
   font-weight: 100; }
 
 .tagline a, a:visited, a:active {
-  color: #1aa597;
+  color: #526047;
   font-weight: 800;
   font-size: 2.5rem; }
 
 .tagline a:hover {
-  color: #35baad; }
+  color: #9AACB8; }
 
 .icons-social i {
   padding: 10px; }
@@ -56,24 +57,27 @@ main {
   height: 2.65rem; }
 
 main {
-  background: #EDEDED;
-  color: #AF3D4E; }
+  background: #3C455C;
+  color: #526047; }
 
 .icons-social a {
   font-size: 1.5rem;
-  color: #AF3D4E; }
+  color: #526047; }
+
+.icons-social a:hover {
+  color: #9AACB8; }
 
 .icons-social a svg path {
-  fill: #AF3D4E; }
+  fill: #526047; }
 
 .card-main {
-  background: #fff;
+  background: #CBC5C1;
   border-radius: 4px;
   width: 90vw;
   margin: auto; }
 
 .card-resume {
-  background: #fff;
+  background: #CBC5C1;
   border-radius: 4px;
   padding: 1.5rem;
   margin: 0 auto auto auto; }
@@ -83,7 +87,7 @@ main {
 
 .card-icon {
   display: inline-block;
-  background: #fff;
+  background: #CBC5C1;
   border-radius: 4px;
   padding: .5rem;
   margin: auto 2rem 4rem 2rem; }
