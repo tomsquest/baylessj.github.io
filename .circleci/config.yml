@@ -13,13 +13,9 @@ jobs:
       - run:
           git config --global user.email "baylessjonathan@gmail.com" > /dev/null 2>&1
       - run:
-          git config --global user.name "$baylessj-circleci" > /dev/null 2>&1
+          git config --global user.name "baylessj-circleci" > /dev/null 2>&1
       - run:
           git init
-      - run:
-          remote=$(git config remote.origin.url)
-      - run:
-          git remote add --fetch origin "$remote"
       - run:
           git checkout master
       - run:
