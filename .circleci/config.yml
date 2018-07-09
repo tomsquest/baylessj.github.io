@@ -12,14 +12,21 @@ jobs:
           sudo apt-get update; sudo apt-get install ruby-sass
       - run:
           git config --global user.email "baylessjonathan@gmail.com" > /dev/null 2>&1
+      - run:
           git config --global user.name "$baylessj-circleci" > /dev/null 2>&1
+      - run:
           git init
+      - run:
           remote=$(git config remote.origin.url)
+      - run:
           git remote add --fetch origin "$remote"
+      - run:
           git checkout master
       - run:
           sass css/main.scss\:css/main.css
       - run:
           git add -A
+      - run:
           git commit --allow-empty -m "CI Build [ci skip]"
+      - run:
           git push --force --quiet origin master
