@@ -60,7 +60,9 @@ main {
 .card {
   background: #CBC5C1;
   border-radius: 4px;
-  margin: auto;
+  margin: auto; }
+
+.card a {
   color: #555; }
 
 .card-main {
