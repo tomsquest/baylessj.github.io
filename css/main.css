@@ -55,6 +55,9 @@ main {
   color: #555;
   margin: 1vh 2rem; }
 
+@media (min-width: 768px) {
+  .icons-social {
+    margin: 10vh 2rem; } }
 .icons-social a:hover {
   color: #9AACB8; }
 
