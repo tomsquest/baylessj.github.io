@@ -69,44 +69,33 @@ main {
 	padding: 10px;
 }
 
-.devto {
-	margin-bottom: -0.20rem;
-}
-
-.devto svg {
-	margin-bottom: -0.20rem;
-	margin-left: 0.675rem;;
-	width: 2.65rem;
-	height: 2.65rem;
-}
-
 main {
-	background: $nightfall;
-	color: $fresh;
+	background: $background-color;
+	color: $text-color--main;
 }
 
 .icons-social a {
   font-size: 1.5rem;
-	color: $fresh;
+	color: $text-color--main;
 }
 
 .icons-social a:hover {
-	color: $lead;
+	color: $text-color--highlight;
 }
 
 .icons-social a svg path{
-	fill: $fresh;
+	fill: $text-color--main;
 }
 
 .card-main {
-  background: $cashmere;
+  background: $card-color;
   border-radius: 4px;
   width: 90vw;
   margin: auto;
 }
 
 .card-resume {
-  background: $cashmere;
+  background: $card-color;
   border-radius: 4px;
   padding: 1.5rem;
   margin: 0 auto auto auto;
@@ -118,7 +107,7 @@ main {
 
 .card-icon {
   display: inline-block;
-  background: $cashmere;
+  background: $card-color;
   border-radius: 4px;
   padding: .5rem;
   margin: auto 2rem 4rem 2rem;
