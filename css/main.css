@@ -60,7 +60,8 @@ main {
 .card {
   background: #CBC5C1;
   border-radius: 4px;
-  margin: auto; }
+  margin: auto;
+  color: #555; }
 
 .card-main {
   width: 90vw; }
