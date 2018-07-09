@@ -74,7 +74,7 @@ main {
 	padding: 10px;
 	font-size: 1.5rem;
 	color: $text-color--main;
-	margin: 1vh 2rem;
+	margin: 1vh 2rem !default;
 }
 
 .icons-social a:hover {
