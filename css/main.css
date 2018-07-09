@@ -61,6 +61,12 @@ section {
   min-height: 100vh;
   height: 100vh; }
 
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; }
+
 /* Minimal CSS Reset */
 html {
   box-sizing: border-box;
