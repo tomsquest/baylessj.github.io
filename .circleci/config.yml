@@ -1,0 +1,12 @@
+version: 2
+dependencies:
+  pre:
+    - sudo apt-get update; sudo apt-get install ruby-sass
+jobs:
+  build:
+    docker:
+      - image: debian:stretch
+    steps:
+      - checkout
+      - run:
+          sass css/main.scss\:css/main.css
