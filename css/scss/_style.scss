@@ -40,7 +40,9 @@ main {
 	min-height: 100vh;
 	justify-content: center;
 	text-align: center;
-  z-index: 0;
+  	z-index: 0;
+	background: $background-color;
+	color: $text-color--main;
 }
 
 .intro {
@@ -65,17 +67,9 @@ main {
   color: $lead;
 }
 
-.icons-social i {
+.icons-social {
 	padding: 10px;
-}
-
-main {
-	background: $background-color;
-	color: $text-color--main;
-}
-
-.icons-social a {
-  font-size: 1.5rem;
+	font-size: 1.5rem;
 	color: $text-color--main;
 }
 
@@ -94,17 +88,11 @@ main {
 }
 
 .card-main {
-  background: $card-color;
-  border-radius: 4px;
   width: 90vw;
-  margin: auto;
 }
 
 .card-resume {
-  background: $card-color;
-  border-radius: 4px;
   padding: 1.5rem;
-  margin: auto;
 }
 
 .card-resume i {
@@ -113,8 +101,6 @@ main {
 
 .card-icon {
   display: inline-block;
-  background: $card-color;
-  border-radius: 4px;
   padding: .5rem;
   margin: 4rem 2rem;
 }
