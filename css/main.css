@@ -57,6 +57,10 @@ main {
 .icons-social a svg path {
   fill: #555; }
 
+section {
+  min-height: 100vh;
+  height: 100vh; }
+
 /* Minimal CSS Reset */
 html {
   box-sizing: border-box;
