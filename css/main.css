@@ -57,28 +57,6 @@ main {
 .icons-social a svg path {
   fill: #555; }
 
-.card {
-  background: #CBC5C1;
-  border-radius: 4px;
-  margin: auto; }
-
-.card a {
-  color: #555; }
-
-.card-main {
-  width: 90vw; }
-
-.card-resume {
-  padding: 1.5rem; }
-
-.card-resume i {
-  margin: 1rem auto auto auto; }
-
-.card-icon {
-  display: inline-block;
-  padding: .5rem;
-  margin: 4rem 2rem; }
-
 /* Minimal CSS Reset */
 html {
   box-sizing: border-box;
