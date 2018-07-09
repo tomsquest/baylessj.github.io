@@ -87,6 +87,12 @@ main {
 	fill: $text-color--main;
 }
 
+.card {
+	background: $card-color;
+  	border-radius: 4px;
+	margin: auto;
+}
+
 .card-main {
   background: $card-color;
   border-radius: 4px;
@@ -98,7 +104,7 @@ main {
   background: $card-color;
   border-radius: 4px;
   padding: 1.5rem;
-  margin: 0 auto auto auto;
+  margin: auto;
 }
 
 .card-resume i {
@@ -110,5 +116,5 @@ main {
   background: $card-color;
   border-radius: 4px;
   padding: .5rem;
-  margin: auto 2rem 4rem 2rem;
+  margin: 4rem 2rem;
 }
