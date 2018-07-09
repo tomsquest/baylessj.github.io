@@ -80,31 +80,3 @@ main {
 .icons-social a svg path{
 	fill: $text-color--main;
 }
-
-.card {
-	background: $card-color;
-  	border-radius: 4px;
-	margin: auto;
-}
-
-.card a {
-	color: $text-color--main;
-}
-
-.card-main {
-  width: 90vw;
-}
-
-.card-resume {
-  padding: 1.5rem;
-}
-
-.card-resume i {
-  margin: 1rem auto auto auto;
-}
-
-.card-icon {
-  display: inline-block;
-  padding: .5rem;
-  margin: 4rem 2rem;
-}
