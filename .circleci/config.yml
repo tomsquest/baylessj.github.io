@@ -6,9 +6,9 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.4.1
-    pre:
-      - sudo apt-get update; sudo apt-get install ruby-sass
     steps:
       - checkout
+      - run:
+          sudo apt-get update; sudo apt-get install ruby-sass
       - run:
           sass css/main.scss\:css/main.css
