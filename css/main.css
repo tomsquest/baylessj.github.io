@@ -40,23 +40,15 @@ img {
 .card {
   background: #CBC5C1;
   border-radius: 4px;
-  margin: auto; }
+  margin: auto;
+  padding: 1rem; }
 
 .card a {
   color: #555; }
 
 .card-main {
-  width: 90vw; }
-
-.card-resume {
-  padding: 1.5rem; }
-
-.card-resume i {
-  margin: 1rem auto auto auto; }
-
-.card-icon {
-  display: inline-block;
-  padding: 1.0rem; }
+  width: 90vw;
+  padding: 0.5rem; }
 
 /* Typography */
 html {
