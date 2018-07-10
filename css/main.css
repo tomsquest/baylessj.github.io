@@ -1,7 +1,7 @@
 /* Minimal CSS Reset */
 html {
   box-sizing: border-box;
-  font-size: 12px; }
+  font-size: 20px; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
