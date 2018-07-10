@@ -78,7 +78,7 @@ html {
   html {
     font-size: 28px; } }
 .icons-social i {
-  font-size: 3em; }
+  font-size: 3rem; }
 
 /* Custom Styles */
 main {
@@ -93,25 +93,22 @@ main {
 
 .intro {
   font-family: 'Reem Kufi', sans-serif;
-  font-size: 6rem;
+  font-size: 3rem;
   font-weight: 600; }
 
 .tagline {
-  font-size: 2rem;
   margin: 1.5rem 0;
   font-weight: 100; }
 
 .tagline a, a:visited, a:active {
   color: #555;
-  font-weight: 800;
-  font-size: 2.5rem; }
+  font-weight: 800; }
 
 .tagline a:hover {
   color: #9AACB8; }
 
 .icons-social {
   padding: 10px;
-  font-size: 1.5rem;
   color: #555;
   margin: 1vh 2rem; }
 
