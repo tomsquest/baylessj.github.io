@@ -55,17 +55,15 @@ main {
 }
 
 .tagline {
-	margin: 1.5rem 0;
-	font-weight: 100;
+  font-weight: 100;
 }
 
-.tagline a, a:visited, a:active {
-  color: $fresh;
+.resume {
   font-weight: 800;
 }
 
-.tagline a:hover {
-  color: $lead;
+a:hover {
+  color: $text-color--highlight;
 }
 
 .icons-social {
@@ -78,10 +76,6 @@ main {
 	.icons-social {
 		margin: 10vh 2rem;
 	}
-}
-
-.icons-social a:hover {
-	color: $text-color--highlight;
 }
 
 .icons-social a svg path{
