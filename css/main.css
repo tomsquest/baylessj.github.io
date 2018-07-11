@@ -148,6 +148,15 @@ a:hover {
 .project .row {
   align-items: center; }
 
+.page-down {
+  cursor: pointer;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, 0); }
+  .page-down a {
+    text-decoration: none; }
+
 section {
   min-height: 100vh; }
 
