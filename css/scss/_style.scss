@@ -37,7 +37,7 @@ html {
 
 /* Custom Styles */
 
-main {
+html body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -153,20 +153,20 @@ a:hover {
   .page-down {
     cursor: pointer;
     position: absolute;
-    top: 740px;
+    top: 600px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%)
   }
   
-  .projects-container {
+  .project-title {
     position: absolute;
-    top: 768px;
+    top: 700px;
   }
   
   .projects-container {
     position: absolute;
-    top: 1000px;
+    top: 850px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%)
