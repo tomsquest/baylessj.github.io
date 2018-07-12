@@ -83,10 +83,8 @@ a:hover {
   margin: 1vh 2rem;
 }
 
-@media (min-width: 576px) {
-  .icons-social {
-    margin: 10vh 2rem;
-  }
+.icons-social--row {
+   margin: 10vh 0;
 }
 
 .icons-social a svg path {
