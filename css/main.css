@@ -173,18 +173,18 @@ a:hover {
   .page-down {
     cursor: pointer;
     position: absolute;
-    top: 600px;
+    top: 800px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%); }
 
   .project-title {
     position: absolute;
-    top: 700px; }
+    top: 900px; }
 
   .projects-container {
     position: absolute;
-    top: 850px;
+    top: 1050px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%); } }
