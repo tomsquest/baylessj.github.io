@@ -119,7 +119,7 @@ a:hover {
   color: #555;
   margin: 1vh 2rem; }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .icons-social {
     margin: 10vh 2rem; } }
 .icons-social a svg path {
