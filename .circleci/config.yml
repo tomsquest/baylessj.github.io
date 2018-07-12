@@ -19,7 +19,7 @@ jobs:
       - run:
           git checkout master
       - run:
-          sass css/main.scss\:css/main.css
+          sass css/main.scss\:css/main.css --style compressed
       - run:
           git add -A
       - run:
