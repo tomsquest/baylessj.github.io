@@ -36,13 +36,18 @@
 }
 
 .card {
-  background: $card-color;
+  background: #cbc5c1;
   border-radius: 4px;
   margin: auto;
   padding: 1rem;
 }
 
 .card-main {
-  width: 90vw;
-  padding: 0.5rem;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
