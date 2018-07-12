@@ -148,6 +148,36 @@ a:hover {
 .project .row {
   align-items: center; }
 
+.projects-container {
+  position: relative;
+  top: 5vh; }
+
+@media (max-height: 768px) {
+  .about-container {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); }
+
+  .page-down {
+    cursor: pointer;
+    position: absolute;
+    top: 740px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); }
+
+  .projects-container {
+    position: absolute;
+    top: 768px; }
+
+  .projects-container {
+    position: absolute;
+    top: 1000px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); } }
 .page-down {
   cursor: pointer;
   position: absolute;
