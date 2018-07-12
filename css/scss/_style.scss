@@ -48,12 +48,6 @@ html body {
 	color: $text-color--main;
 }
 
-.intro {
-	font-family: 'Reem Kufi', sans-serif;
-	font-size: 3rem;
-	font-weight: 600;
-}
-
 a {
   text-decoration: underline;
   color: #bc8b69;
@@ -67,10 +61,12 @@ a:hover {
   font-family: "Reem Kufi", sans-serif;
   font-size: 3rem;
   font-weight: 600;
+  padding: 0.5rem;
 }
 
 .tagline {
   font-weight: 100;
+  padding: 0.5rem;
 }
 
 .resume {
