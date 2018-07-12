@@ -93,11 +93,18 @@ a:hover {
   fill: $text-color--main;
 }
 
+.card-title {
+  position: absolute;
+  top: 0;
+}
+
 .project-title {
   font-family: "Reem Kufi", sans-serif;
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 4vh;
+  margin-bottom: 15vh;
+  position: absolute;
+  top: 100vh;
 }
 
 .project {
