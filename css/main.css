@@ -160,8 +160,7 @@ a:hover {
   align-items: center; }
 
 .projects-container {
-  position: relative;
-  top: 5vh; }
+  margin: 20vh 0; }
 
 @media (max-height: 768px) {
   .about-container {
