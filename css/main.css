@@ -44,14 +44,19 @@ img {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
 
 .card {
-  background: #CBC5C1;
+  background: #cbc5c1;
   border-radius: 4px;
   margin: auto;
   padding: 1rem; }
 
 .card-main {
-  width: 90vw;
-  padding: 0.5rem; }
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 /* Typography */
 html {
