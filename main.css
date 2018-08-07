@@ -125,54 +125,41 @@ body {
 }
 
 /* Nav */
-.nav {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-.nav > .list {
-    padding: 0 13px 0;
-}
-.nav > .list > .item > .link {
-    font-size: 1.4rem;
-    padding: 20px 10px;
-}
-
 .nav-home {
-    margin-top: 10px;
-    text-align: center;
-	display: block;
+	width: 200px;
+	margin: 10px auto 0;
 }
 .nav-home > .list {
-    padding: 0;
+    list-style: none;
+	margin: 0;
+	padding: 0;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	-o-column-count: 2;
+	-ms-column-count: 2;
+	column-count: 2;
+	-webkit-column-gap: 40px;
+	-moz-column-gap: 40px;
+	-o-column-gap: 40px;
+	-ms-column-gap: 40px;
+	column-gap: 40px;
+}
+.nav-home > .list > .-left{
+	text-align: left;
+}
+.nav-home > .list > .-right{
+	text-align: right;
 }
 .nav-home > .list > .item > .link {
-	font-size: 2rem;
-	padding: 7px 15px;
-	margin: 0;
-	border-radius: 4%;
-	transition: all .4s ease-in-out;
-	width: 70px;
+    font-weight: 300;
+    font-size: 1.4rem;
+    text-decoration: none;
+	color: indigo;
+	border-bottom: 1px solid transparent;
 }
 .nav-home > .list > .item > .link:hover {
 	color: #666;
-}
-
-.nav, .nav-home > .list {
-    list-style: none;
-    margin: 0;
-    padding: 0 13px 0;
-}
-.nav, .nav-home > .list > .item {
-    display: inline-block;
-}
-.nav, .nav-home > .list > .item > .link {
-    display: inline-block;
-    font-weight: 300;
-    font-size: 1.4rem;
-    padding: 20px 10px;
-    text-decoration: none;
-	color: indigo;
+	border-color: #aaa;
 }
 
 /* Projects */
