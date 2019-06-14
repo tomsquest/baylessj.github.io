@@ -185,7 +185,15 @@ nav h1, nav h2 {
 }
 
 #logo, #gravatar {
+  margin-top: 2rem;
   margin-bottom: 25px;
+}
+
+#logo {
+	width: 180px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 15%;
 }
 
 #gravatar {
