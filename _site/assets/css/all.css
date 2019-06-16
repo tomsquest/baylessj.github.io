@@ -332,8 +332,80 @@
 	.half-bottom { margin-bottom: 10px !important; }
 	.add-bottom { margin-bottom: 20px !important; }
 
+/*
+* Skeleton V1.1
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 8/17/2011
+*/
 
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+	#logo {
+		font-size: 21px;
+		margin-bottom: 15px; }
+	nav .button {
+		padding: 9px 20px 11px; }
+}
 
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	nav {
+		width: 160px; }
+	.sidebar h2 {
+		font-size: 18px;
+	}
+
+	#bio {
+		font-size: 14px;
+	}
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+	header h1 { font-size: 34px; line-height: 37px; }
+	nav { position: relative; }
+	nav ul,
+	#logo { text-align: left; }
+	.sidebar {
+		display: none;
+	}
+	.content {
+		border: 0px;
+		padding-left: 0px;
+	}
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.sidebar {
+		display: none;
+	}
+
+	h1 {
+		font-size: 28px;
+		line-height: 36px;
+	}
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+	.sidebar {
+		display: none;
+	}
+
+	h1 {
+		font-size: 24px;
+		line-height: 32px;
+	}
+
+	h2 {
+		font-size: 22px;
+		line-height: 24px;
+	}
+}
 /*
 * Skeleton V1.1
 * Copyright 2011, Dave Gamache
@@ -571,356 +643,6 @@
 
 
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  font-size: 16px;
-  background-color: white;
-  color: #222222;
-  line-height: 24px;
-  margin: 0;
-  border-top: 7px solid #3498db;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #181818;
-  font-family: "open sans", sans-serif;
-  font-weight: 600;
-}
-
-h1.title {
-  font-weight: 800;
-}
-
-h1 {
-  font-size: 32px;
-  line-height: 40px;
-}
-
-h2 {
-  font-size: 24px;
-  line-height: 30px;
-}
-
-h3 {
-  font-size: 21px;
-  line-height: 24px;
-  margin: 1em 0;
-}
-
-ul {
-  margin: 1em 0;
-  list-style: disc;
-}
-
-a {
-  color: #3498db;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #3498db;
-  text-decoration: underline;
-}
-
-a:visited {
-  color: #3498db;
-}
-
-table {
-  font-size: inherit;
-  font: 100%;
-}
-
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-ul.posts {
-  margin-top: 0;
-  list-style-type: none;
-  margin-bottom: 10px;
-}
-
-ul.posts li {
-  line-height: 22px;
-  font-size: 16px;
-  margin-bottom: 0px;
-}
-
-ul.posts span {
-  font-family: 'Lucida Console', 'Andale Mono', monospace;
-  color: #aaa;
-  padding-right: 5px;
-  font-size:14px;
-}
-
-.meta {
-  color: #aaa;
-  margin: 0 0 10px 0;
-}
-
-.site .footer {
-  font-size: 80%;
-  color: #666;
-  border-top: 4px solid #eee;
-  overflow: hidden;
-}
-
-nav h1, nav h2 {
-  text-align: center;
-}
-
-#bio {
-  margin-top: 10px;
-  margin-bottom: 15px;
-  border: dotted #ddd;
-  border-width: 1px 0;
-  padding-top: 15px;
-}
-
-#social {
-  margin-bottom: 10px;
-  font-size: 13px;
-}
-
-#post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em;
-  margin-bottom: 20px !important;
-}
-
-#post ul,
-#post ol {
-  margin-left: 1.35em;
-}
-
-#post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  font-size: 85%;
-  padding: 0 .2em;
-}
-
-#post pre code {
-  border: none;
-}
-
-.sidebar {
-  padding-top: 25px;
-  font-family: "open sans", sans-serif;
-}
-
-.sidebar p {
-  font-weight: 200;
-}
-
-.sidebar a {
-  font-weight: 600;
-}
-
-.content {
-  font: 400 16px/22px "open sans", sans-serif;
-  border-left: 1px solid #DDD;
-  padding-left: 40px;
-  padding-top: 25px;
-  min-height: 400px;
-}
-
-.footer {
-  width: 100%;
-}
-
-.footer {
-  font-size: 80%;
-  color: #666;
-  border-top: 4px solid #EEE;
-  overflow: hidden;
-}
-
-.aside {
-  font-size: 75%;
-  color: #666;
-}
-
-#home h2 {
-  color: #3498db;
-}
-
-#logo, #gravatar {
-  margin-top: 2rem;
-  margin-bottom: 25px;
-}
-
-#logo {
-	width: 180px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 15%;
-}
-
-#gravatar {
-  width: 180px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-
-#stalker {
-  display: inline-block;
-  height: 18px;
-  margin-left: 5px;
-}
-
-#stalker a {
-  width: 29px;
-  overflow: hidden;
-  float: left;
-}
-
-#stalker i {
-  font-size: 28px;
-  margin-right: 5px;
-}
-
-#stalker a:hover {
-  text-decoration: none;
-  color: #3498db;
-}
-
-i.fa-hn {
-  font-family: "open sans", sans-serif;
-  text-align: center;
-  font-size: 18px !important;
-  position: relative;
-  color: white;
-}
-
-.home {
-  font-size: 24px;
-  float: right;
-  color: #AAA;
-}
-
-.home:hover {
-  text-decoration: none;
-}
-
-.disclaimer p {
-  margin-top: 5px;
-  font-size: 11px;
-  text-align: center;
-}
-
-.footnotes {
-  font-size: 14px;
-  font-style: italic;
-}
-
-.icon-overlay {
-  font-size: 16px !important;
-  position: relative;
-  bottom: 27px;
-  left: 5px;
-  color: white;
-}
-
-.caption {
-  margin: 0 auto;
-  text-align: center;
-  font-size: smaller;
-  padding-bottom: 10px
-}
-
-sup {
-  vertical-align: super;
-  font-size: smaller;
-}
-
-/*
-* Skeleton V1.1
-* Copyright 2011, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 8/17/2011
-*/
-
-/* Smaller than standard 960 (devices and browsers) */
-@media only screen and (max-width: 959px) {
-	#logo {
-		font-size: 21px;
-		margin-bottom: 15px; }
-	nav .button {
-		padding: 9px 20px 11px; }
-}
-
-/* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-	nav {
-		width: 160px; }
-	.sidebar h2 {
-		font-size: 18px;
-	}
-
-	#bio {
-		font-size: 14px;
-	}
-}
-
-/* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 767px) {
-	header h1 { font-size: 34px; line-height: 37px; }
-	nav { position: relative; }
-	nav ul,
-	#logo { text-align: left; }
-	.sidebar {
-		display: none;
-	}
-	.content {
-		border: 0px;
-		padding-left: 0px;
-	}
-}
-
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-	.sidebar {
-		display: none;
-	}
-
-	h1 {
-		font-size: 28px;
-		line-height: 36px;
-	}
-}
-
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {
-	.sidebar {
-		display: none;
-	}
-
-	h1 {
-		font-size: 24px;
-		line-height: 32px;
-	}
-
-	h2 {
-		font-size: 22px;
-		line-height: 24px;
-	}
-}
 .highlight{background-color:#073642;color:#93a1a1}.highlight .c{color:#586e75 !important;font-style:italic !important}.highlight .cm{color:#586e75 !important;font-style:italic !important}.highlight .cp{color:#586e75 !important;font-style:italic !important}.highlight .c1{color:#586e75 !important;font-style:italic !important}.highlight .cs{color:#586e75 !important;font-weight:bold !important;font-style:italic !important}.highlight .err{color:#dc322f !important;background:none !important}.highlight .k{color:#cb4b16 !important}.highlight .o{color:#93a1a1 !important;font-weight:bold !important}.highlight .p{color:#93a1a1 !important}.highlight .ow{color:#2aa198 !important;font-weight:bold !important}.highlight .gd{color:#93a1a1 !important;background-color:#372c34 !important;display:inline-block}.highlight .gd .x{color:#93a1a1 !important;background-color:#4d2d33 !important;display:inline-block}.highlight .ge{color:#93a1a1 !important;font-style:italic !important}.highlight .gr{color:#aa0000}.highlight .gh{color:#586e75 !important}.highlight .gi{color:#93a1a1 !important;background-color:#1a412b !important;display:inline-block}.highlight .gi .x{color:#93a1a1 !important;background-color:#355720 !important;display:inline-block}.highlight .go{color:#888888}.highlight .gp{color:#555555}.highlight .gs{color:#93a1a1 !important;font-weight:bold !important}.highlight .gu{color:#6c71c4 !important}.highlight .gt{color:#aa0000}.highlight .kc{color:#859900 !important;font-weight:bold !important}.highlight .kd{color:#268bd2 !important}.highlight .kp{color:#cb4b16 !important;font-weight:bold !important}.highlight .kr{color:#d33682 !important;font-weight:bold !important}.highlight .kt{color:#2aa198 !important}.highlight .n{color:#268bd2 !important}.highlight .na{color:#268bd2 !important}.highlight .nb{color:#859900 !important}.highlight .nc{color:#d33682 !important}.highlight .no{color:#b58900 !important}.highlight .ni{color:#800080}.highlight .nl{color:#859900 !important}.highlight .ne{color:#268bd2 !important;font-weight:bold !important}.highlight .nf{color:#268bd2 !important;font-weight:bold !important}.highlight .nn{color:#b58900 !important}.highlight .nt{color:#268bd2 !important;font-weight:bold !important}.highlight .nx{color:#b58900 !important}.highlight .bp{color:#999999}.highlight .vc{color:#008080}.highlight .vg{color:#268bd2 !important}.highlight .vi{color:#268bd2 !important}.highlight .nv{color:#268bd2 !important}.highlight .w{color:#bbbbbb}.highlight .mf{color:#2aa198 !important}.highlight .m{color:#2aa198 !important}.highlight .mh{color:#2aa198 !important}.highlight .mi{color:#2aa198 !important}.highlight .mo{color:#009999}.highlight .s{color:#2aa198 !important}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#2aa198 !important}.highlight .s2{color:#2aa198 !important}.highlight .se{color:#dc322f !important}.highlight .sh{color:#d14}.highlight .si{color:#268bd2 !important}.highlight .sx{color:#d14}.highlight .sr{color:#2aa198 !important}.highlight .s1{color:#2aa198 !important}.highlight .ss{color:#990073}.highlight .il{color:#009999}.highlight div .gd,.highlight div .gd .x,.highlight div .gi,.highlight div .gi .x{display:inline-block;width:100%}
 pre { white-space: pre; overflow: auto; }
 code, pre { font-family: Monaco,Menlo,Consolas,"Courier New",monospace; }

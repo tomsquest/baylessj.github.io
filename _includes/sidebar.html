@@ -1,11 +1,7 @@
 <nav>
   <h1> </h1>
   <a href="/">
-    {% if site.data.theme.social.gravatar %}
-    <img src="http://www.gravatar.com/avatar/{{ site.data.theme.social.gravatar }}?s=200" id="gravatar" alt="My photo"/>
-    {% else %}
-    <img src="assets/me_square.jpg" id="logo" alt="Blog logo"/>
-    {% endif %}
+    <img src="{{ site.url }}/assets/me_square.jpg" id="logo" alt="Blog logo"/>
   </a>
   <h2>I'm <br>
     <a href="/">{{ site.data.theme.name }}</a>.</h2>
