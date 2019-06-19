@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>The blog of Jonathan Bayless</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000"/>
+ <updated>2019-06-19T05:35:36-04:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name>Jonathan Bayless</name>
+   <email>me@jonathanbayless.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Hello World</title>
+   <link href="http://localhost:4000/blog/2019/06/16/helloworld.html"/>
+   <updated>2019-06-16T00:00:00-04:00</updated>
+   <id>http://localhost:4000/blog/2019/06/16/helloworld</id>
+   <content type="html">&lt;p&gt;I’m a big fan of side-projects and I’ve run a &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt;
+site as my personal site for a while now, so it seemed inevitable that I would take
+advantage of its blogging capabilities at some point.&lt;/p&gt;
+
+&lt;p&gt;I have a number of fun new projects in the works now, hopefully I’ll be able
+to put together some nice articles on those in the near future.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>
