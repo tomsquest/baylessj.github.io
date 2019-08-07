@@ -7,7 +7,7 @@ html, body {
 
 body {
   font-size: 16px;
-  background-color: #232831;
+  background-color: #333;
   color: #eceff4;
   line-height: 24px;
   margin: 0;
@@ -107,7 +107,7 @@ nav h1, nav h2 {
 
 #post pre {
   border: 1px solid #4c566a;
-  background-color: #232831;
+  background-color: #333;
   padding: 0 .4em;
   margin-bottom: 20px !important; }
 
@@ -117,7 +117,7 @@ nav h1, nav h2 {
 
 #post code {
   border: 1px solid #4c566a;
-  background-color: #232831;
+  background-color: #333;
   font-size: 85%;
   padding: 0 .2em; }
 
