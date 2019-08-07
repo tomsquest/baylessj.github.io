@@ -4,13 +4,214 @@
  <title>The blog of Jonathan Bayless</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000"/>
- <updated>2019-06-19T05:35:36-04:00</updated>
+ <updated>2019-08-07T19:25:21-04:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Jonathan Bayless</name>
    <email>me@jonathanbayless.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Gradle Configuration for Firebase Usage in Flutter</title>
+   <link href="http://localhost:4000/2019/08/07/flutter-firebase-gradle.html"/>
+   <updated>2019-08-07T00:00:00-04:00</updated>
+   <id>http://localhost:4000/2019/08/07/flutter-firebase-gradle</id>
+   <content type="html">&lt;p&gt;I recently got started developing a cross-platform app in &lt;a href=&quot;https://flutter.dev/&quot;&gt;Flutter&lt;/a&gt;, a framework developed by Google that uses the &lt;a href=&quot;https://dart.dev/&quot;&gt;Dart&lt;/a&gt; programming language. One major benefit of the fact that Flutter is created by Google is the &lt;em&gt;mostly&lt;/em&gt; easy integration with Google’s other services. I have come across one minor exception to this rule in my attempt to integrate &lt;a href=&quot;https://firebase.google.com/&quot;&gt;Firebase&lt;/a&gt; with my Flutter project.&lt;/p&gt;
+
+&lt;h1 id=&quot;original-gradle-modifications&quot;&gt;Original Gradle Modifications&lt;/h1&gt;
+
+&lt;p&gt;I followed along with Google’s guide on modifying my app’s &lt;a href=&quot;https://gradle.org/&quot;&gt;Gradle&lt;/a&gt; configuration files to integrate Firebase services into the app. It may seem obvious to people who have used Gradle before, but as a complete newbie to the tool I quickly ran into a few issues that were solved by paying better attention to which modifications were supposed to the be made to the &lt;code class=&quot;highlighter-rouge&quot;&gt;android&lt;/code&gt; directory’s Gradle config and which modifications were to be made to the &lt;code class=&quot;highlighter-rouge&quot;&gt;android/app&lt;/code&gt; directory’s Gradle config.&lt;/p&gt;
+
+&lt;p&gt;My Gradle config files after implementing the Google guide’s changes were as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;./android/&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.google.gms:google-services:4.3.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = &quot;${rootProject.buildDir}/${project.name}&quot;
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;./android/app/&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader -&amp;gt;
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException(&quot;Flutter SDK not found. Define location with flutter.sdk in the local.properties file.&quot;)
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+apply plugin: 'com.android.application'
+apply from: &quot;$flutterRoot/packages/flutter_tools/gradle/flutter.gradle&quot;
+
+android {
+    compileSdkVersion 28
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    defaultConfig {
+        applicationId &quot;com.jonathanbayless.autodo&quot;
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+        testInstrumentationRunner &quot;android.support.test.runner.AndroidJUnitRunner&quot;
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle plugin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;too-many-methods-for-one-dex-file&quot;&gt;Too many methods for one Dex file&lt;/h1&gt;
+
+&lt;p&gt;After I was done making a number of silly mistakes due to not reading through the Google with enough care I was met with a build error that was not addressed in the Google guide. The addition of the &lt;code class=&quot;highlighter-rouge&quot;&gt;google-services&lt;/code&gt; package inflated the size of the built project to the point that it exceeded the number of methods allowed in a single &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;h1 id=&quot;todo-add-an-explanation-on-what-a-dex-file-is&quot;&gt;todo: add an explanation on what a dex file is&lt;/h1&gt;
+
+&lt;p&gt;The solution I found to this error consisted of two changes: enabling a build flag regarding the &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; generation and changing the target Android SDK.&lt;/p&gt;
+
+&lt;p&gt;I added the following lines:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;multiDexEnabled true
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;shrinkResources true
+minifyEnabled true
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Working &lt;code class=&quot;highlighter-rouge&quot;&gt;./android/app/&lt;/code&gt; config file:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader -&amp;gt;
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException(&quot;Flutter SDK not found. Define location with flutter.sdk in the local.properties file.&quot;)
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+apply plugin: 'com.android.application'
+apply from: &quot;$flutterRoot/packages/flutter_tools/gradle/flutter.gradle&quot;
+
+android {
+    compileSdkVersion 28
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    defaultConfig {
+        applicationId &quot;com.jonathanbayless.autodo&quot;
+        minSdkVersion 16
+        targetSdkVersion 28
+        multiDexEnabled true
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+        testInstrumentationRunner &quot;android.support.test.runner.AndroidJUnitRunner&quot;
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig signingConfigs.debug
+            shrinkResources true
+            minifyEnabled true
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle plugin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Hello World</title>
