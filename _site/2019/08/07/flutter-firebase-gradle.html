@@ -203,20 +203,41 @@ apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle p
 
 <p>After I was done making a number of silly mistakes due to not reading through the Google with enough care I was met with a build error that was not addressed in the Google guide. The addition of the <code class="highlighter-rouge">google-services</code> package inflated the size of the built project to the point that it exceeded the number of methods allowed in a single <code class="highlighter-rouge">.dex</code> file.</p>
 
-<h1 id="todo-add-an-explanation-on-what-a-dex-file-is">todo: add an explanation on what a dex file is</h1>
+<p>A <code class="highlighter-rouge">.dex</code> file is similar to a <code class="highlighter-rouge">.jar</code> file from typical Java development but is unique to the Android ecosystem. The <code class="highlighter-rouge">.dex</code> file is used as an intermediary file in developing a <code class="highlighter-rouge">.apk</code> file that will be loaded onto the Android device. I discovered through this error message that the default Gradle configuration generated with Flutter only uses one <code class="highlighter-rouge">.dex</code> file to generate the <code class="highlighter-rouge">.apk</code> file.</p>
 
-<p>The solution I found to this error consisted of two changes: enabling a build flag regarding the <code class="highlighter-rouge">.dex</code> generation and changing the target Android SDK.</p>
+<p>The solution I found to this error consisted of two changes: enabling a build flag regarding the <code class="highlighter-rouge">.dex</code> generation and enabling resource shrinking. The default configuration that only allows for one <code class="highlighter-rouge">.dex</code> file can be changed by setting the <code class="highlighter-rouge">multiDexEnabled</code> to <code class="highlighter-rouge">true</code> in the <code class="highlighter-rouge">defaultConfig</code> section of the <code class="highlighter-rouge">android</code> rules.</p>
 
-<p>I added the following lines:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>defaultConfig {
+    applicationId "com.jonathanbayless.autodo"
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>multiDexEnabled true
+    multiDexEnabled true
+
+    versionCode flutterVersionCode.toInteger()
+    versionName flutterVersionName
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+}
 </code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shrinkResources true
-minifyEnabled true
+<p>The first change alone will solve the build errors, but I was frustrated with the massive increase in size of my application when I was only using a small portion of the Firebase feature set. There are two additional flags available to reduce the size of the <code class="highlighter-rouge">.dex</code> files and resulting <code class="highlighter-rouge">.apk</code> file. The <code class="highlighter-rouge">shrinkResources</code> flag removes unnecessary code that comes by default with the <code class="highlighter-rouge">google-services</code> package and the <code class="highlighter-rouge">minifyEnabled</code> just removes any dead code.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>buildTypes {
+    release {
+        // TODO: Add your own signing config for the release build.
+        // Signing with the debug keys for now, so `flutter run --release` works.
+        signingConfig signingConfigs.debug
+
+        shrinkResources true
+        minifyEnabled true
+
+    }
+}
 </code></pre></div></div>
 
-<p>Working <code class="highlighter-rouge">./android/app/</code> config file:</p>
+<p>The mix of these three flags reduced the size of my application and got it back to being able to compile.</p>
+
+<h2 id="resulting-gradle-file">Resulting Gradle File</h2>
+
+<p>The <code class="highlighter-rouge">./android/</code> Gradle config file was not changed at all, it was the same as in the original example. Here is the modified <code class="highlighter-rouge">./android/app/</code> Gradle file:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')

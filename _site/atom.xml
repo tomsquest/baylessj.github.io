@@ -4,7 +4,7 @@
  <title>The blog of Jonathan Bayless</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000"/>
- <updated>2019-08-07T19:25:21-04:00</updated>
+ <updated>2019-08-08T19:57:10-04:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Jonathan Bayless</name>
@@ -129,20 +129,41 @@ apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle p
 
 &lt;p&gt;After I was done making a number of silly mistakes due to not reading through the Google with enough care I was met with a build error that was not addressed in the Google guide. The addition of the &lt;code class=&quot;highlighter-rouge&quot;&gt;google-services&lt;/code&gt; package inflated the size of the built project to the point that it exceeded the number of methods allowed in a single &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file.&lt;/p&gt;
 
-&lt;h1 id=&quot;todo-add-an-explanation-on-what-a-dex-file-is&quot;&gt;todo: add an explanation on what a dex file is&lt;/h1&gt;
+&lt;p&gt;A &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file is similar to a &lt;code class=&quot;highlighter-rouge&quot;&gt;.jar&lt;/code&gt; file from typical Java development but is unique to the Android ecosystem. The &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file is used as an intermediary file in developing a &lt;code class=&quot;highlighter-rouge&quot;&gt;.apk&lt;/code&gt; file that will be loaded onto the Android device. I discovered through this error message that the default Gradle configuration generated with Flutter only uses one &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file to generate the &lt;code class=&quot;highlighter-rouge&quot;&gt;.apk&lt;/code&gt; file.&lt;/p&gt;
 
-&lt;p&gt;The solution I found to this error consisted of two changes: enabling a build flag regarding the &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; generation and changing the target Android SDK.&lt;/p&gt;
+&lt;p&gt;The solution I found to this error consisted of two changes: enabling a build flag regarding the &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; generation and enabling resource shrinking. The default configuration that only allows for one &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file can be changed by setting the &lt;code class=&quot;highlighter-rouge&quot;&gt;multiDexEnabled&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;defaultConfig&lt;/code&gt; section of the &lt;code class=&quot;highlighter-rouge&quot;&gt;android&lt;/code&gt; rules.&lt;/p&gt;
 
-&lt;p&gt;I added the following lines:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;defaultConfig {
+    applicationId &quot;com.jonathanbayless.autodo&quot;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;multiDexEnabled true
+    multiDexEnabled true
+
+    versionCode flutterVersionCode.toInteger()
+    versionName flutterVersionName
+    testInstrumentationRunner &quot;android.support.test.runner.AndroidJUnitRunner&quot;
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;shrinkResources true
-minifyEnabled true
+&lt;p&gt;The first change alone will solve the build errors, but I was frustrated with the massive increase in size of my application when I was only using a small portion of the Firebase feature set. There are two additional flags available to reduce the size of the &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; files and resulting &lt;code class=&quot;highlighter-rouge&quot;&gt;.apk&lt;/code&gt; file. The &lt;code class=&quot;highlighter-rouge&quot;&gt;shrinkResources&lt;/code&gt; flag removes unnecessary code that comes by default with the &lt;code class=&quot;highlighter-rouge&quot;&gt;google-services&lt;/code&gt; package and the &lt;code class=&quot;highlighter-rouge&quot;&gt;minifyEnabled&lt;/code&gt; just removes any dead code.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;buildTypes {
+    release {
+        // TODO: Add your own signing config for the release build.
+        // Signing with the debug keys for now, so `flutter run --release` works.
+        signingConfig signingConfigs.debug
+
+        shrinkResources true
+        minifyEnabled true
+
+    }
+}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Working &lt;code class=&quot;highlighter-rouge&quot;&gt;./android/app/&lt;/code&gt; config file:&lt;/p&gt;
+&lt;p&gt;The mix of these three flags reduced the size of my application and got it back to being able to compile.&lt;/p&gt;
+
+&lt;h2 id=&quot;resulting-gradle-file&quot;&gt;Resulting Gradle File&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;./android/&lt;/code&gt; Gradle config file was not changed at all, it was the same as in the original example. Here is the modified &lt;code class=&quot;highlighter-rouge&quot;&gt;./android/app/&lt;/code&gt; Gradle file:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
