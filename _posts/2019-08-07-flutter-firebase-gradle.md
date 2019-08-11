@@ -10,13 +10,11 @@ categories: []
 title: 'Gradle Configuration for Firebase Usage in Flutter'
 ---
 
-I recently got started developing a cross-platform app in [Flutter](https://flutter.dev/), a framework developed by Google that uses the [Dart](https://dart.dev/) programming language. One major benefit of the fact that Flutter is created by Google is the _mostly_ easy integration with Google's other services. I have come across one minor exception to this rule in my attempt to integrate [Firebase](https://firebase.google.com/) with my Flutter project.
+I recently got started developing a cross-platform app in [Flutter](https://flutter.dev/), a framework developed by Google that uses the [Dart](https://dart.dev/) programming language. One major benefit of the fact that Flutter is created by Google is the _mostly_ easy integration with Google's other services. I have come across one minor exception to this rule in my attempt to integrate [Firebase](https://firebase.google.com/) with my Flutter project, an error regarding `.dex` file generation. 
 
-# Original Gradle Modifications
+### Original Gradle Modifications
 
-I followed along with Google's guide on modifying my app's [Gradle](https://gradle.org/) configuration files to integrate Firebase services into the app. It may seem obvious to people who have used Gradle before, but as a complete newbie to the tool I quickly ran into a few issues that were solved by paying better attention to which modifications were supposed to the be made to the `android` directory's Gradle config and which modifications were to be made to the `android/app` directory's Gradle config.
-
-My Gradle config files after implementing the Google guide's changes were as follows:
+I followed along with Google's guide on modifying my app's [Gradle](https://gradle.org/) configuration files to integrate Firebase services into the app. My Gradle config files after implementing the Google guide's changes were as follows:
 
 `./android/`:
 
@@ -120,9 +118,9 @@ dependencies {
 apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle plugin
 ```
 
-# Too many methods for one Dex file
+### Too many methods for one Dex file
 
-After I was done making a number of silly mistakes due to not reading through the Google with enough care I was met with a build error that was not addressed in the Google guide. The addition of the `google-services` package inflated the size of the built project to the point that it exceeded the number of methods allowed in a single `.dex` file.
+After I was done following the Google guide I was met with a build error that was not addressed in the Google guide. The addition of the `google-services` package inflated the size of the built project to the point that it exceeded the number of methods allowed in a single `.dex` file.
 
 A `.dex` file is similar to a `.jar` file from typical Java development but is unique to the Android ecosystem. The `.dex` file is used as an intermediary file in developing a `.apk` file that will be loaded onto the Android device. I discovered through this error message that the default Gradle configuration generated with Flutter only uses one `.dex` file to generate the `.apk` file.
 
@@ -158,7 +156,7 @@ buildTypes {
 
 The mix of these three flags reduced the size of my application and got it back to being able to compile.
 
-## Resulting Gradle File
+#### Resulting Gradle File
 
 The `./android/` Gradle config file was not changed at all, it was the same as in the original example. Here is the modified `./android/app/` Gradle file:
 
