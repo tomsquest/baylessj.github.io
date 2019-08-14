@@ -4,11 +4,7 @@
  <title>The blog of Jonathan Bayless</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000"/>
-<<<<<<< HEAD
- <updated>2019-08-07T19:31:18-04:00</updated>
-=======
- <updated>2019-08-08T19:57:10-04:00</updated>
->>>>>>> flutter-firebase
+ <updated>2019-08-14T19:13:34-04:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Jonathan Bayless</name>
@@ -21,13 +17,11 @@
    <link href="http://localhost:4000/2019/08/07/flutter-firebase-gradle.html"/>
    <updated>2019-08-07T00:00:00-04:00</updated>
    <id>http://localhost:4000/2019/08/07/flutter-firebase-gradle</id>
-   <content type="html">&lt;p&gt;I recently got started developing a cross-platform app in &lt;a href=&quot;https://flutter.dev/&quot;&gt;Flutter&lt;/a&gt;, a framework developed by Google that uses the &lt;a href=&quot;https://dart.dev/&quot;&gt;Dart&lt;/a&gt; programming language. One major benefit of the fact that Flutter is created by Google is the &lt;em&gt;mostly&lt;/em&gt; easy integration with Google’s other services. I have come across one minor exception to this rule in my attempt to integrate &lt;a href=&quot;https://firebase.google.com/&quot;&gt;Firebase&lt;/a&gt; with my Flutter project.&lt;/p&gt;
+   <content type="html">&lt;p&gt;I recently got started developing a cross-platform app in &lt;a href=&quot;https://flutter.dev/&quot;&gt;Flutter&lt;/a&gt;, a framework developed by Google that uses the &lt;a href=&quot;https://dart.dev/&quot;&gt;Dart&lt;/a&gt; programming language. One major benefit of the fact that Flutter is created by Google is the &lt;em&gt;mostly&lt;/em&gt; easy integration with Google’s other services. I have come across one minor exception to this rule in my attempt to integrate &lt;a href=&quot;https://firebase.google.com/&quot;&gt;Firebase&lt;/a&gt; with my Flutter project, an error regarding &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file generation.&lt;/p&gt;
 
-&lt;h1 id=&quot;original-gradle-modifications&quot;&gt;Original Gradle Modifications&lt;/h1&gt;
+&lt;h3 id=&quot;original-gradle-modifications&quot;&gt;Original Gradle Modifications&lt;/h3&gt;
 
-&lt;p&gt;I followed along with Google’s guide on modifying my app’s &lt;a href=&quot;https://gradle.org/&quot;&gt;Gradle&lt;/a&gt; configuration files to integrate Firebase services into the app. It may seem obvious to people who have used Gradle before, but as a complete newbie to the tool I quickly ran into a few issues that were solved by paying better attention to which modifications were supposed to the be made to the &lt;code class=&quot;highlighter-rouge&quot;&gt;android&lt;/code&gt; directory’s Gradle config and which modifications were to be made to the &lt;code class=&quot;highlighter-rouge&quot;&gt;android/app&lt;/code&gt; directory’s Gradle config.&lt;/p&gt;
-
-&lt;p&gt;My Gradle config files after implementing the Google guide’s changes were as follows:&lt;/p&gt;
+&lt;p&gt;I followed along with Google’s guide on modifying my app’s &lt;a href=&quot;https://gradle.org/&quot;&gt;Gradle&lt;/a&gt; configuration files to integrate Firebase services into the app. My Gradle config files after implementing the Google guide’s changes were as follows:&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;./android/&lt;/code&gt;:&lt;/p&gt;
 
@@ -129,9 +123,9 @@ dependencies {
 apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle plugin
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h1 id=&quot;too-many-methods-for-one-dex-file&quot;&gt;Too many methods for one Dex file&lt;/h1&gt;
+&lt;h3 id=&quot;too-many-methods-for-one-dex-file&quot;&gt;Too many methods for one Dex file&lt;/h3&gt;
 
-&lt;p&gt;After I was done making a number of silly mistakes due to not reading through the Google with enough care I was met with a build error that was not addressed in the Google guide. The addition of the &lt;code class=&quot;highlighter-rouge&quot;&gt;google-services&lt;/code&gt; package inflated the size of the built project to the point that it exceeded the number of methods allowed in a single &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;After I was done following the Google guide I was met with a build error that was not addressed in the Google guide. The addition of the &lt;code class=&quot;highlighter-rouge&quot;&gt;google-services&lt;/code&gt; package inflated the size of the built project to the point that it exceeded the number of methods allowed in a single &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file.&lt;/p&gt;
 
 &lt;p&gt;A &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file is similar to a &lt;code class=&quot;highlighter-rouge&quot;&gt;.jar&lt;/code&gt; file from typical Java development but is unique to the Android ecosystem. The &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file is used as an intermediary file in developing a &lt;code class=&quot;highlighter-rouge&quot;&gt;.apk&lt;/code&gt; file that will be loaded onto the Android device. I discovered through this error message that the default Gradle configuration generated with Flutter only uses one &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file to generate the &lt;code class=&quot;highlighter-rouge&quot;&gt;.apk&lt;/code&gt; file.&lt;/p&gt;
 
@@ -165,7 +159,7 @@ apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle p
 
 &lt;p&gt;The mix of these three flags reduced the size of my application and got it back to being able to compile.&lt;/p&gt;
 
-&lt;h2 id=&quot;resulting-gradle-file&quot;&gt;Resulting Gradle File&lt;/h2&gt;
+&lt;h4 id=&quot;resulting-gradle-file&quot;&gt;Resulting Gradle File&lt;/h4&gt;
 
 &lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;./android/&lt;/code&gt; Gradle config file was not changed at all, it was the same as in the original example. Here is the modified &lt;code class=&quot;highlighter-rouge&quot;&gt;./android/app/&lt;/code&gt; Gradle file:&lt;/p&gt;
 

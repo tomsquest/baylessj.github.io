@@ -91,13 +91,11 @@
 <h1 class="title">Gradle Configuration for Firebase Usage in Flutter</h1>
 
 <div id="post">
-  <p>I recently got started developing a cross-platform app in <a href="https://flutter.dev/">Flutter</a>, a framework developed by Google that uses the <a href="https://dart.dev/">Dart</a> programming language. One major benefit of the fact that Flutter is created by Google is the <em>mostly</em> easy integration with Google’s other services. I have come across one minor exception to this rule in my attempt to integrate <a href="https://firebase.google.com/">Firebase</a> with my Flutter project.</p>
+  <p>I recently got started developing a cross-platform app in <a href="https://flutter.dev/">Flutter</a>, a framework developed by Google that uses the <a href="https://dart.dev/">Dart</a> programming language. One major benefit of the fact that Flutter is created by Google is the <em>mostly</em> easy integration with Google’s other services. I have come across one minor exception to this rule in my attempt to integrate <a href="https://firebase.google.com/">Firebase</a> with my Flutter project, an error regarding <code class="highlighter-rouge">.dex</code> file generation.</p>
 
-<h1 id="original-gradle-modifications">Original Gradle Modifications</h1>
+<h3 id="original-gradle-modifications">Original Gradle Modifications</h3>
 
-<p>I followed along with Google’s guide on modifying my app’s <a href="https://gradle.org/">Gradle</a> configuration files to integrate Firebase services into the app. It may seem obvious to people who have used Gradle before, but as a complete newbie to the tool I quickly ran into a few issues that were solved by paying better attention to which modifications were supposed to the be made to the <code class="highlighter-rouge">android</code> directory’s Gradle config and which modifications were to be made to the <code class="highlighter-rouge">android/app</code> directory’s Gradle config.</p>
-
-<p>My Gradle config files after implementing the Google guide’s changes were as follows:</p>
+<p>I followed along with Google’s guide on modifying my app’s <a href="https://gradle.org/">Gradle</a> configuration files to integrate Firebase services into the app. My Gradle config files after implementing the Google guide’s changes were as follows:</p>
 
 <p><code class="highlighter-rouge">./android/</code>:</p>
 
@@ -199,9 +197,9 @@ dependencies {
 apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle plugin
 </code></pre></div></div>
 
-<h1 id="too-many-methods-for-one-dex-file">Too many methods for one Dex file</h1>
+<h3 id="too-many-methods-for-one-dex-file">Too many methods for one Dex file</h3>
 
-<p>After I was done making a number of silly mistakes due to not reading through the Google with enough care I was met with a build error that was not addressed in the Google guide. The addition of the <code class="highlighter-rouge">google-services</code> package inflated the size of the built project to the point that it exceeded the number of methods allowed in a single <code class="highlighter-rouge">.dex</code> file.</p>
+<p>After I was done following the Google guide I was met with a build error that was not addressed in the Google guide. The addition of the <code class="highlighter-rouge">google-services</code> package inflated the size of the built project to the point that it exceeded the number of methods allowed in a single <code class="highlighter-rouge">.dex</code> file.</p>
 
 <p>A <code class="highlighter-rouge">.dex</code> file is similar to a <code class="highlighter-rouge">.jar</code> file from typical Java development but is unique to the Android ecosystem. The <code class="highlighter-rouge">.dex</code> file is used as an intermediary file in developing a <code class="highlighter-rouge">.apk</code> file that will be loaded onto the Android device. I discovered through this error message that the default Gradle configuration generated with Flutter only uses one <code class="highlighter-rouge">.dex</code> file to generate the <code class="highlighter-rouge">.apk</code> file.</p>
 
@@ -235,7 +233,7 @@ apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle p
 
 <p>The mix of these three flags reduced the size of my application and got it back to being able to compile.</p>
 
-<h2 id="resulting-gradle-file">Resulting Gradle File</h2>
+<h4 id="resulting-gradle-file">Resulting Gradle File</h4>
 
 <p>The <code class="highlighter-rouge">./android/</code> Gradle config file was not changed at all, it was the same as in the original example. Here is the modified <code class="highlighter-rouge">./android/app/</code> Gradle file:</p>
 

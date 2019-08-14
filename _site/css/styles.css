@@ -231,3 +231,6 @@ i.fa-hn {
 sup {
   vertical-align: super;
   font-size: smaller; }
+
+.highlighter-rouge {
+  display: inline-block; }
