@@ -15,7 +15,7 @@ I recently picked up a [Hot Dox](https://www.alpacakeyboards.com/) keyboard from
 
 ### Ergonomics
 
-The layout of the Hot Dox differs in many ways from a traditional keyboard and, in my opinion, those differences are largely for the better. The Hot Dox is a clone of the [Ergodox](https://ergodox-ez.com/) keyboard, which is described as an _ortholinear, split ergonomic keyboard_. For those who aren't familiar, I'll break down those adjectives individually.
+The layout of the Hot Dox differs in many ways from a traditional keyboard and, in my opinion, those differences are largely for the better. The Hot Dox is a clone of the [Ergodox](https://ergodox-ez.com/) keyboard, which is described as an _ortholinear, split keyboard_. For those who aren't familiar, I'll break down those adjectives individually.
 
 #### Ortholinear
 
@@ -25,4 +25,16 @@ After a couple of months with my Hot Dox I still can't claim to be completely us
 
 #### Split
 
-A _split_ keyboard is very easily noticeable as such, the halves of the keyboard associated with each typing hand are, well, split apart. 
+A _split_ keyboard is very easily noticeable as such, the halves of the keyboard associated with each typing hand are, well, split apart. The main benefit of this design is ergonomics; it is a lot more natural to have your arms sitting even with your shoulders than to stick your hands in line with the middle of your ribcage like with a traditional keyboard. I don't have any [RSI]() issues with my hands to combat so I don't have a huge need for the improved ergonomics but it helps me rest easier knowing that I'm doing less harm to my body by typing for so many hours a day.
+
+One somewhat unintended benefit of the split layout is forcing good habit when typing. I had previously been pretty bad about moving my hands around the keyboard and off of home row but with the split keyboard it's impossible to accidentally start typing on the wrong hand's side of the keyboard. I've noticed that this has improved my typing form on traditional keyboards as well.
+
+### QMK
+
+The _QMK Firmware_ is without a doubt my favorite part of using this keyboard. This firmware allows you to change the behavior of every key on the keyboard to fit your preferences. The modifications to the key behavior is not restricted simply to the standard set of keys that can be accessed without holding any modifier keys, instead you can add up to 32 **layers** of different functionality. A layer is similar to the change from lowercase to uppercase that occurs when holding the shift key. I have one layer that allows me to use the arrow keys on the `i, j, k, l` keys so I don't have to move from home row, another layer that allows me to move the mouse with the same set of keys, and another layer that gives me a numpad around home row position. These layers give me all of the benefits of a full-size keyboard (plus some, in the case of the mouse keys) without ever having to leave home row.
+
+You can find my QMK configuration file on my [github]().
+
+### Overall Impressions
+
+
