@@ -4,7 +4,7 @@
  <title>The blog of Jonathan Bayless</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000"/>
- <updated>2019-06-19T06:24:48-04:00</updated>
+ <updated>2019-09-16T18:36:15-04:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Jonathan Bayless</name>
@@ -13,44 +13,47 @@
 
  
  <entry>
-   <title>ErgoDox 76 "Hot Dox" Review</title>
-   <link href="http://localhost:4000/blog/keyboard/2019/06/19/hotdox-assembly.html"/>
-   <updated>2019-06-19T00:00:00-04:00</updated>
-   <id>http://localhost:4000/blog/keyboard/2019/06/19/hotdox-assembly</id>
-   <content type="html">&lt;p&gt;Since starting as a full-time software developer I’ve found myself looking for a
-bit more flexibility in a keyboard than I could get from my beloved
-&lt;a href=&quot;https://www.amazon.com/Mechanical-Keyboard-Keycaps-Cherry-Mx-Clear/dp/B00OFM6F80&quot;&gt;Vortex Pok3r&lt;/a&gt;.
-I found myself getting stuck in bad typing habits with the traditional staggered
-layout and I wasn’t able to configure macros on the base layer for everything
-that I wanted. It looked like the best route to get the configurability I wanted
-was to build a keyboard myself in some capacity.&lt;/p&gt;
+   <title>Alpaca Keyboards Hot Dox Review</title>
+   <link href="http://localhost:4000/2019/09/16/hotdox-review.html"/>
+   <updated>2019-09-16T00:00:00-04:00</updated>
+   <id>http://localhost:4000/2019/09/16/hotdox-review</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/keyboard1.jpg&quot; alt=&quot;image keyboard photo&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;I originally had my heart set on building a
-&lt;a href=&quot;https://github.com/tshort/dactyl-keyboard&quot;&gt;Dactyl Manuform&lt;/a&gt; keyboard to jump
-fully into the deep end of building a mechanical keyboard. I still think that may
-come back as a future project, but until I get consistent access to a 3D printer
-(sidebar: Look at your local library’s offerings for 3D printing and other hobby
-fabrication, my local library has a great little fabrication lab but unfortunately
-a very long waiting list for the certification classes as a result), printing and
-hand-wiring a keyboard isn’t going to happen.&lt;/p&gt;
+&lt;p&gt;I recently picked up a &lt;a href=&quot;https://www.alpacakeyboards.com/&quot;&gt;Hot Dox&lt;/a&gt; keyboard from &lt;a href=&quot;https://www.alpacakeyboards.com/&quot;&gt;Alpaca Keyboards&lt;/a&gt; as my introduction to the world of split ergonomic keyboards. My primary goals in moving from a traditional mechanical keyboard were to get an improvement in ergonomics and to get much more customization potential than I had with my current keyboards. The Hot Dox is acceptable on the ergonomics front and excellent on the customization front due to its use of the &lt;a href=&quot;https://qmk.fm/&quot;&gt;QMK Firmware&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Through a mix of fate and an order mix-up I ended up with a fantastic option for
-my use-case - the &lt;a href=&quot;https://www.alpacakeyboards.com/&quot;&gt;Alpaca Keyboards ErgoDox 76 “Hot Dox”&lt;/a&gt;.
-This keyboard keeps the same split, ergonomic layout that I liked about the Dactyl
-while making the assembly process significantly easier by using a PCB with hot-swap
-connectors. The major game changer in my use of the keyboard has undoubtedly been
-the &lt;a href=&quot;https://docs.qmk.fm/#/&quot;&gt;QMK Firmware&lt;/a&gt; that runs on the Hot Dox’s processor;
-being able to remap any key on the keyboard and create all sorts of macros was
-essential for transitioning between a traditional keyboard and the split, ortholinear
-Hot Dox.&lt;/p&gt;
+&lt;h3 id=&quot;ergonomics&quot;&gt;Ergonomics&lt;/h3&gt;
 
-&lt;p&gt;assembly&lt;/p&gt;
+&lt;p&gt;The layout of the Hot Dox differs in many ways from a traditional keyboard and, in my opinion, those differences are largely for the better. The Hot Dox is a clone of the &lt;a href=&quot;https://ergodox-ez.com/&quot;&gt;Ergodox&lt;/a&gt; keyboard, which is described as an &lt;em&gt;ortholinear, split keyboard&lt;/em&gt;. For those who aren’t familiar, I’ll break down those adjectives individually.&lt;/p&gt;
 
-&lt;p&gt;photos&lt;/p&gt;
+&lt;h4 id=&quot;ortholinear&quot;&gt;Ortholinear&lt;/h4&gt;
 
-&lt;p&gt;current keymap&lt;/p&gt;
+&lt;p&gt;An &lt;em&gt;ortholinear&lt;/em&gt; keyboard is a keyboard where each of the keys are grouped in straight columns rather than in a staggered layout like a traditional keyboard. In my experience it is a surprisingly different experience to type on an ortholinear keyboard compared to a traditional; the keys are only moved a tiny bit on the keyboard but forcing the keys into perfect columns drastically changed the way my fingers moved to hit most keys. Hitting keys that are not on home row is achieved through a linear movement of the corresponding typing finger and there is no need for a change in hand orientation.&lt;/p&gt;
 
-&lt;p&gt;QMK follow-up&lt;/p&gt;
+&lt;p&gt;After a couple of months with my Hot Dox I still can’t claim to be completely used to this new layout, but it makes a lot more sense than a staggered layout. It seems to me like a milder version of switching to a non-traditional layout like &lt;a href=&quot;https://en.m.wikipedia.org/wiki/Dvorak_Simplified_Keyboard&quot;&gt;Dvorak&lt;/a&gt;– while there are pros to the changed layout, one will likely always have times when the have to switch back to a traditional layout. I have not had too hard of a time making the mental switch associated with using a traditional keyboard some times and the ortholinear layout at other times, but it is definitely still noticeable.&lt;/p&gt;
+
+&lt;h4 id=&quot;split&quot;&gt;Split&lt;/h4&gt;
+
+&lt;p&gt;A &lt;em&gt;split&lt;/em&gt; keyboard is very easily noticeable as such, the halves of the keyboard associated with each typing hand are, well, split apart. The main benefit of this design is ergonomics; it is a lot more natural to have your arms sitting even with your shoulders than to stick your hands in line with the middle of your ribcage like with a traditional keyboard. I don’t have any &lt;a href=&quot;https://en.wikipedia.org/wiki/Repetitive_strain_injury&quot;&gt;RSI&lt;/a&gt; issues with my hands to combat so I don’t have a huge need for the improved ergonomics but it helps me rest easier knowing that I’m doing less harm to my body by typing for so many hours a day.&lt;/p&gt;
+
+&lt;p&gt;One somewhat unintended benefit of the split layout is forcing good habit when typing. I had previously been pretty bad about moving my hands around the keyboard and off of home row but with the split keyboard it’s impossible to accidentally start typing on the wrong hand’s side of the keyboard. I’ve noticed that this has improved my typing form on traditional keyboards as well.&lt;/p&gt;
+
+&lt;h3 id=&quot;qmk&quot;&gt;QMK&lt;/h3&gt;
+
+&lt;p&gt;The &lt;em&gt;QMK Firmware&lt;/em&gt; is without a doubt my favorite part of using this keyboard. This firmware allows you to change the behavior of every key on the keyboard to fit your preferences. The modifications to the key behavior is not restricted simply to the standard set of keys that can be accessed without holding any modifier keys, instead you can add up to 32 &lt;strong&gt;layers&lt;/strong&gt; of different functionality. A layer is similar to the change from lowercase to uppercase that occurs when holding the shift key. I have one layer that allows me to use the arrow keys on the &lt;code class=&quot;highlighter-rouge&quot;&gt;i, j, k, l&lt;/code&gt; keys so I don’t have to move from home row, another layer that allows me to move the mouse with the same set of keys, and another layer that gives me a numpad around home row position. These layers give me all of the benefits of a full-size keyboard (plus some, in the case of the mouse keys) without ever having to leave home row.&lt;/p&gt;
+
+&lt;p&gt;You can find my QMK configuration file on my &lt;a href=&quot;https://github.com/baylessj/hotdox-qmk&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;tenting-modification&quot;&gt;Tenting Modification&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/keyboard2.jpg&quot; alt=&quot;image tented keyboard macro shot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I made one minor modification to my assembly of the keyboard that has made a decent improvement in my impression of its ergonomics. One popular configuration with split keyboards is a &lt;em&gt;tented&lt;/em&gt; configuration where the inside edge of each of the keyboard halves is raised somewhat. This puts your hands at a slight angle, which is a more natural way for them to sit. Some keyboards allow this behavior by default, such as the &lt;a href=&quot;https://ergodox-ez.com/&quot;&gt;Ergodox&lt;/a&gt;, but the Hot Dox does not.&lt;/p&gt;
+
+&lt;p&gt;For $4 and a trip to the hardware store, however, I was able to easily achieve some slight tenting to my keyboard. I got a set of 3mm x 16mm button head screw with a 2mm drive and a 3mm - 0.5 hex nut for each of the screws. I replaced the screws holding together the case on the inside corners with these longer screws, adjusted the hex nuts snug against the case, and had a nice tented keyboard setup.&lt;/p&gt;
+
+&lt;h3 id=&quot;overall-impressions&quot;&gt;Overall Impressions&lt;/h3&gt;
+
+&lt;p&gt;Making the switch to a split, ortholinear keyboard has been a difficult transition, but I’ve found that this keyboard makes it well worth it. My typing ability has improved on other keyboards as well, but the flexibility with the QMK Firmware allows me to be my most productive on this keyboard. 10/10 – get a cool keyboard.&lt;/p&gt;
 </content>
  </entry>
  
