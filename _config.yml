@@ -1,6 +1,6 @@
 # General Jekyll Config
 highlighter: rouge
-url: http://jonathanbayless.com
+url: https://jonathanbayless.com
 lsi: false
 exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
 sass:
