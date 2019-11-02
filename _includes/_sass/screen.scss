@@ -1,5 +1,4 @@
 $highlight-color: $nord8;
-// $dark-background: darken($nord0, 5%);
 $dark-background: #333;
 $light-text: $nord6;
 $accent: $nord3;
@@ -173,7 +172,9 @@ nav h1, nav h2 {
 }
 
 .content {
-  font: 400 16px/22px "open sans", sans-serif;
+  font: 50 16px/22px "Ubuntu", sans-serif;
+  font-weight: 50;
+  line-height: 1.6;
   border-left: 1px solid $accent;
   padding-left: 40px;
   padding-top: 25px;

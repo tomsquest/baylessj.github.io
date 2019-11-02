@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>The blog of Jonathan Bayless</title>
- <link href="http://jonathanbayless.com/atom.xml" rel="self"/>
- <link href="http://jonathanbayless.com"/>
- <updated>2019-09-16T18:38:51-04:00</updated>
- <id>http://jonathanbayless.com</id>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000"/>
+ <updated>2019-11-02T15:12:06-04:00</updated>
+ <id>http://localhost:4000</id>
  <author>
    <name>Jonathan Bayless</name>
    <email>me@jonathanbayless.com</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Alpaca Keyboards Hot Dox Review</title>
-   <link href="http://jonathanbayless.com/2019/09/16/hotdox-review.html"/>
+   <link href="http://localhost:4000/2019/09/16/hotdox-review.html"/>
    <updated>2019-09-16T00:00:00-04:00</updated>
-   <id>http://jonathanbayless.com/2019/09/16/hotdox-review</id>
+   <id>http://localhost:4000/2019/09/16/hotdox-review</id>
    <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/keyboard1.jpg&quot; alt=&quot;image keyboard photo&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I recently picked up a &lt;a href=&quot;https://www.alpacakeyboards.com/&quot;&gt;Hot Dox&lt;/a&gt; keyboard from &lt;a href=&quot;https://www.alpacakeyboards.com/&quot;&gt;Alpaca Keyboards&lt;/a&gt; as my introduction to the world of split ergonomic keyboards. My primary goals in moving from a traditional mechanical keyboard were to get an improvement in ergonomics and to get much more customization potential than I had with my current keyboards. The Hot Dox is acceptable on the ergonomics front and excellent on the customization front due to its use of the &lt;a href=&quot;https://qmk.fm/&quot;&gt;QMK Firmware&lt;/a&gt;.&lt;/p&gt;
@@ -59,9 +59,9 @@
  
  <entry>
    <title>Gradle Configuration for Firebase Usage in Flutter</title>
-   <link href="http://jonathanbayless.com/2019/08/07/flutter-firebase-gradle.html"/>
+   <link href="http://localhost:4000/2019/08/07/flutter-firebase-gradle.html"/>
    <updated>2019-08-07T00:00:00-04:00</updated>
-   <id>http://jonathanbayless.com/2019/08/07/flutter-firebase-gradle</id>
+   <id>http://localhost:4000/2019/08/07/flutter-firebase-gradle</id>
    <content type="html">&lt;p&gt;I recently got started developing a cross-platform app in &lt;a href=&quot;https://flutter.dev/&quot;&gt;Flutter&lt;/a&gt;, a framework developed by Google that uses the &lt;a href=&quot;https://dart.dev/&quot;&gt;Dart&lt;/a&gt; programming language. One major benefit of the fact that Flutter is created by Google is the &lt;em&gt;mostly&lt;/em&gt; easy integration with Google’s other services. I have come across one minor exception to this rule in my attempt to integrate &lt;a href=&quot;https://firebase.google.com/&quot;&gt;Firebase&lt;/a&gt; with my Flutter project, an error regarding &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file generation.&lt;/p&gt;
 
 &lt;h3 id=&quot;original-gradle-modifications&quot;&gt;Original Gradle Modifications&lt;/h3&gt;
@@ -279,9 +279,9 @@ apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle p
  
  <entry>
    <title>Hello World</title>
-   <link href="http://jonathanbayless.com/blog/2019/06/16/helloworld.html"/>
+   <link href="http://localhost:4000/blog/2019/06/16/helloworld.html"/>
    <updated>2019-06-16T00:00:00-04:00</updated>
-   <id>http://jonathanbayless.com/blog/2019/06/16/helloworld</id>
+   <id>http://localhost:4000/blog/2019/06/16/helloworld</id>
    <content type="html">&lt;p&gt;I’m a big fan of side-projects and I’ve run a &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt;
 site as my personal site for a while now, so it seemed inevitable that I would take
 advantage of its blogging capabilities at some point.&lt;/p&gt;

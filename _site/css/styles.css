@@ -137,7 +137,9 @@ nav h1, nav h2 {
   font-weight: 600; }
 
 .content {
-  font: 400 16px/22px "open sans", sans-serif;
+  font: 50 16px/22px "Ubuntu", sans-serif;
+  font-weight: 50;
+  line-height: 1.6;
   border-left: 1px solid #4c566a;
   padding-left: 40px;
   padding-top: 25px;
