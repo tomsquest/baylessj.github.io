@@ -4,13 +4,44 @@
  <title>The blog of Jonathan Bayless</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000"/>
- <updated>2019-11-02T15:12:06-04:00</updated>
+ <updated>2020-02-08T14:05:49-05:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Jonathan Bayless</name>
    <email>me@jonathanbayless.com</email>
  </author>
 
+ 
+ <entry>
+   <title>~ as Home does not work in MacOS .zshrc</title>
+   <link href="http://localhost:4000/2020/02/08/zshrc-macos.html"/>
+   <updated>2020-02-08T00:00:00-05:00</updated>
+   <id>http://localhost:4000/2020/02/08/zshrc-macos</id>
+   <content type="html">&lt;p&gt;I recently picked up a 2015 MBP to use as a development machine for my side
+project, &lt;a href=&quot;https://autodo.app&quot;&gt;auToDo&lt;/a&gt;, since Apple won’t let you make iOS apps without a Mac. I’m
+not thrilled to be developing on a platform other than my beloved &lt;a href=&quot;https://system76.com/pop&quot;&gt;Pop! OS&lt;/a&gt;,
+but it’s at least still a *nix based system.&lt;/p&gt;
+
+&lt;p&gt;I was glad to see that, as of Catalina, MacOS uses &lt;a href=&quot;https://www.zsh.org/&quot;&gt;Zsh&lt;/a&gt; as its default shell.
+I use Zsh as my default shell on my linux machine so I was excited to simply
+drop in my &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; file from the linux machine. For the most part that worked,
+after installing &lt;a href=&quot;https://ohmyz.sh/&quot;&gt;Oh-My-Zsh&lt;/a&gt; and the other usual things, but running &lt;code class=&quot;highlighter-rouge&quot;&gt;flutter&lt;/code&gt;
+did not.&lt;/p&gt;
+
+&lt;p&gt;This was a bit of an issue since the MacBook’s main purpose in life was to be a
+flutter dev machine. I spent about half an hour verifying that I had all of the
+proper executables installed for Flutter and that they had the right permissions,
+only to realize that the issue was very simple but not immediately obvious.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt; symbol does not expand to &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/{USER_NAME}/&lt;/code&gt; in a &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; file on MacOS
+like it does in Pop! OS. I had been using the &lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt; symbol to point to the location
+of the flutter binaries on my &lt;code class=&quot;highlighter-rouge&quot;&gt;PATH&lt;/code&gt;, which worked on my linux machine but not
+on the MacBook. I changed these symbols to the full &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/{USER_NAME}/&lt;/code&gt; string
+in my &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; and everything worked fine and dandy for Flutter.&lt;/p&gt;
+
+&lt;p&gt;Don’t be like me, use full paths in your Mac’s &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; file.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Alpaca Keyboards Hot Dox Review</title>

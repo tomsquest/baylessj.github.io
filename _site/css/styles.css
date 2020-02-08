@@ -42,6 +42,9 @@ a {
   color: #88c0d0;
   text-decoration: none; }
 
+p {
+  line-height: 1.8rem; }
+
 a:hover {
   color: #88c0d0;
   text-decoration: underline; }

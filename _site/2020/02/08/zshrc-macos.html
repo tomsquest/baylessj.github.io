@@ -6,10 +6,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jonathan Bayless - 404 Page Not Found</title>
+  <title>Jonathan Bayless - ~ as Home does not work in MacOS .zshrc</title>
   <meta name="author" content="Jonathan Bayless" />
   <meta name="description" content="The blog of Jonathan Bayless" />
-  <link rel="canonical" href="http://localhost:4000/404.html" />
+  <link rel="canonical" href="http://localhost:4000/2020/02/08/zshrc-macos.html" />
 
   <link href="//fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
@@ -82,11 +82,59 @@
     </div>
 
     <div class="eleven columns content">
-      <div id="home">
-  <h2><i class="fa fa-frown-o"></i> Whoah, that's a 404 Error</h2>
-  <ul id="blog-posts" class="posts">
-    <p>Hey, sorry, but the page you're trying to access doesn't exist. Try <a href="/">going back to the homepage.</a></p>
-  <br /></ul>
+      <p class="meta">
+  February 08, 2020 
+  <a href="/">
+    <i class="home fa fa-home"></i>
+  </a>
+</p>
+
+<h1 class="title">~ as Home does not work in MacOS .zshrc</h1>
+
+<div id="post">
+  <p>I recently picked up a 2015 MBP to use as a development machine for my side
+project, <a href="https://autodo.app">auToDo</a>, since Apple won’t let you make iOS apps without a Mac. I’m
+not thrilled to be developing on a platform other than my beloved <a href="https://system76.com/pop">Pop! OS</a>,
+but it’s at least still a *nix based system.</p>
+
+<p>I was glad to see that, as of Catalina, MacOS uses <a href="https://www.zsh.org/">Zsh</a> as its default shell.
+I use Zsh as my default shell on my linux machine so I was excited to simply
+drop in my <code class="highlighter-rouge">.zshrc</code> file from the linux machine. For the most part that worked,
+after installing <a href="https://ohmyz.sh/">Oh-My-Zsh</a> and the other usual things, but running <code class="highlighter-rouge">flutter</code>
+did not.</p>
+
+<p>This was a bit of an issue since the MacBook’s main purpose in life was to be a
+flutter dev machine. I spent about half an hour verifying that I had all of the
+proper executables installed for Flutter and that they had the right permissions,
+only to realize that the issue was very simple but not immediately obvious.</p>
+
+<p>The <code class="highlighter-rouge">~</code> symbol does not expand to <code class="highlighter-rouge">/home/{USER_NAME}/</code> in a <code class="highlighter-rouge">.zshrc</code> file on MacOS
+like it does in Pop! OS. I had been using the <code class="highlighter-rouge">~</code> symbol to point to the location
+of the flutter binaries on my <code class="highlighter-rouge">PATH</code>, which worked on my linux machine but not
+on the MacBook. I changed these symbols to the full <code class="highlighter-rouge">/home/{USER_NAME}/</code> string
+in my <code class="highlighter-rouge">.zshrc</code> and everything worked fine and dandy for Flutter.</p>
+
+<p>Don’t be like me, use full paths in your Mac’s <code class="highlighter-rouge">.zshrc</code> file.</p>
+
+</div>
+
+<div id="related">
+  <h3>Related Posts</h3>
+  <ul class="posts">
+    
+    <li>
+      <span>16 Sep 2019 &raquo;</span> <a href="/2019/09/16/hotdox-review.html">Alpaca Keyboards Hot Dox Review</a>
+    </li>
+    
+    <li>
+      <span>07 Aug 2019 &raquo;</span> <a href="/2019/08/07/flutter-firebase-gradle.html">Gradle Configuration for Firebase Usage in Flutter</a>
+    </li>
+    
+    <li>
+      <span>16 Jun 2019 &raquo;</span> <a href="/blog/2019/06/16/helloworld.html">Hello World</a>
+    </li>
+    
+  </ul>
 </div>
 
 
