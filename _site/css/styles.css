@@ -45,6 +45,9 @@ a {
 p {
   line-height: 1.8rem; }
 
+strong {
+  color: #eceff4; }
+
 a:hover {
   color: #88c0d0;
   text-decoration: underline; }
@@ -161,7 +164,7 @@ nav h1, nav h2 {
   font-size: 75%;
   color: #666; }
 
-#home h2 {
+#home h2, #archive h2 {
   color: #88c0d0; }
 
 #logo, #gravatar {

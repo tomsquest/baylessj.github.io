@@ -1,0 +1,27 @@
+---
+layout: default
+title: Blog Posts
+---
+
+<div id="archive">
+    <h2><i class="fa fa-bookmark"></i> Blog Post Archive</h2>
+
+    {% for post in site.posts %}
+      {% assign currentdate = post.date | date: "%Y" %}
+      {% if currentdate != date %}
+        {% unless forloop.first %}</ul>{% endunless %}
+    <h3>{{ currentdate }}</h3>
+    <ul>
+        {% assign date = currentdate %}
+      {% endif %}
+      {% assign wordcount = post.content | number_of_words %}
+      {% assign readingtime = wordcount | divided_by: 200 %}
+      {% if readingtime == 0 %}
+        {% assign readingtime = 1 %}
+      {% endif %}
+      <li {% if post.favorite and post.layout != "writeup" %}class="favorite"{% endif %}>
+        <a href="{{ post.url }}">{{ post.title }}{% if post.layout == "writeup" %} (Book Writeup){% endif %} ({{ readingtime }} min read)</a>
+      </li>
+      {% if forloop.last %}</ul>{% endif %}
+    {% endfor %}
+</div>
