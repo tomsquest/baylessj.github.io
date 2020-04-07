@@ -244,3 +244,17 @@ sup {
 
 .highlighter-rouge {
   display: inline-block; }
+
+.home-section {
+  margin: 0 0 1em 0; }
+
+.projects p {
+  margin: .5em; }
+
+.projects hr {
+  border: 1px solid #4c566a;
+  margin: 1em; }
+
+.posts li {
+  margin-top: .25em;
+  margin-bottom: .25em; }

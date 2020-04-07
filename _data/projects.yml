@@ -1,0 +1,31 @@
+- name: auToDo
+  description: A flexible, intuitive ToDo list app for keeping track of your cars' maintenance needs.
+  languages:
+    - devicon-google-plain
+    - devicon-apple-plain
+    - devicon-android-plain
+  website: https://autodo.app
+  github: https://github.com/autodo-app/autodo
+- name: VEX Robotics
+  description: Built, programmed, and drove a robot that got the top seed and went undefeated at the VEX World Championships.
+  languages:
+    - devicon-c-plain
+    - devicon-cplusplus-plain
+    - devicon-python-plain
+  website: https://purduesigbots.com
+  github: https://github.com/purduesigbots/forkner-public
+  video: https://www.youtube.com/watch?v=6V1AoDMpTEY
+- name: PROS
+  description: Open source C/C++ development for the <a href="https://www.vexrobotics.com/276-2194.html">VEX Cortex</a> and <a href="https://www.vexrobotics.com/276-4810.html">V5 microcontrollers</a>.
+  languages:
+    - devicon-c-plain
+    - devicon-cplusplus-plain
+    - devicon-javascript-plain
+    - devicon-linux-plain
+  website: https://pros.cs.purdue.edu
+  github: https://github.com/purduesigbots/pros
+- name: libBLRS
+  description: An assortment of VEX Robotics utilities, including an <a href="https://github.com/purduesigbots/libblrs/blob/master/libfbc/src/fbc_util.c">AI-driven PID autotuner</a>.
+  languages:
+    - devicon-c-plain
+  github: https://github.com/purduesigbots/libblrs
