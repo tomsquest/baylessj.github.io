@@ -308,12 +308,14 @@ sup {
 }
 
 .projects p {
-  margin: .5em;
+  margin-top: .5em;
+  margin-bottom: .5em;
 }
 
 .projects hr {
   border: 1px solid $nord3;
-  margin: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .posts li {
