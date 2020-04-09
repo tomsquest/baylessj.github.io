@@ -205,8 +205,10 @@ nav h1, nav h2 {
   color: #666;
 }
 
-#home h2, #archive h2{
+.home h1, #archive h1 {
   color: $highlight-color;
+  margin-top: .5em;
+  margin-bottom: .5em;
 }
 
 #logo, #gravatar {
@@ -258,15 +260,15 @@ i.fa-hn {
   color: $light-text;
 }
 
-.home {
-  font-size: 24px;
-  float: right;
-  color: $light-text;
-}
+// .home {
+//   font-size: 24px;
+//   float: right;
+//   color: $light-text;
+// }
 
-.home:hover {
-  text-decoration: none;
-}
+// .home:hover {
+//   text-decoration: none;
+// }
 
 .disclaimer p {
   margin-top: 5px;
@@ -307,13 +309,20 @@ sup {
   margin: 0 0 1em 0;
 }
 
+.home hr {
+  border: 2px solid $nord3;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
 .projects p {
   margin-top: .5em;
   margin-bottom: .5em;
 }
 
 .projects hr {
-  border: 1px solid $nord3;
+  border: .5px dashed $nord3;
+  // border: none;
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -322,3 +331,5 @@ sup {
   margin-top: .25em;
   margin-bottom: .25em;
 }
+
+

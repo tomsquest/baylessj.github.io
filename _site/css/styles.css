@@ -164,8 +164,10 @@ nav h1, nav h2 {
   font-size: 75%;
   color: #666; }
 
-#home h2, #archive h2 {
-  color: #88c0d0; }
+.home h1, #archive h1 {
+  color: #88c0d0;
+  margin-top: .5em;
+  margin-bottom: .5em; }
 
 #logo, #gravatar {
   margin-top: 2rem;
@@ -208,14 +210,6 @@ i.fa-hn {
   position: relative;
   color: #eceff4; }
 
-.home {
-  font-size: 24px;
-  float: right;
-  color: #eceff4; }
-
-.home:hover {
-  text-decoration: none; }
-
 .disclaimer p {
   margin-top: 5px;
   font-size: 11px;
@@ -248,12 +242,17 @@ sup {
 .home-section {
   margin: 0 0 1em 0; }
 
+.home hr {
+  border: 2px solid #4c566a;
+  margin-top: 2em;
+  margin-bottom: 2em; }
+
 .projects p {
   margin-top: .5em;
   margin-bottom: .5em; }
 
 .projects hr {
-  border: 1px solid #4c566a;
+  border: 0.5px dashed #4c566a;
   margin-top: 1em;
   margin-bottom: 1em; }
 
