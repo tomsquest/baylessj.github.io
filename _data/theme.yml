@@ -19,10 +19,9 @@ social:
 # "Hi, I'm _______"
 name: Jonathan Bayless
 email: me@jonathanbayless.com
-tagline: "weak opinions, strongly held"
 
 # Google Analytics key, leave blank to ignore
-google_analytics_key: UA-xxxx-x
+google_analytics_key: UA-168929396-1
 
 # Toggle "Postings are my own" disclaimer in footer
 show_disclaimer: true

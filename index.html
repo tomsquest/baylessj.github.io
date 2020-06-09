@@ -13,7 +13,7 @@ title: Home
     </ul>
     {% assign num_posts = site.posts | size %}
     {% if num_posts > 5 %}
-      ...and more at <a href="{{site.url}}/archive/">Archive</a>.
+    ...and {{ num_posts | minus: 5 }} more at <a href="{{site.url}}/archive/">Archive</a>.
     {% endif %}
   </div>
   <hr>
