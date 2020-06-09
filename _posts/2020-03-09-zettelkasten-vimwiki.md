@@ -1,4 +1,6 @@
 ---
+layout: post
+tages: [productivity]
 title: Vimwiki + Zettelkasten -- Note Taking Nirvana
 ---
 

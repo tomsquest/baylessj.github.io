@@ -1,4 +1,6 @@
 ---
+layout: post
+tags: [bugfix]
 title: Fixing a soft-bricked Logitech Receiver with fwupdmgr
 ---
 
