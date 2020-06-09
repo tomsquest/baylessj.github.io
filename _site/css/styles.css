@@ -63,7 +63,7 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 600px;
+  max-width: 100%;
   max-height: 600px; }
 
 ul.posts {
@@ -142,15 +142,22 @@ nav h1, nav h2 {
 .sidebar a {
   font-weight: 600; }
 
-.content {
-  font: 50 16px/22px "Ubuntu", sans-serif;
-  font-weight: 50;
-  line-height: 1.6;
-  border-left: 1px solid #4c566a;
-  padding-left: 40px;
-  padding-top: 25px;
-  min-height: 400px; }
-
+@media (min-width: 768px) {
+  .content {
+    font: 50 16px/22px "Ubuntu", sans-serif;
+    font-weight: 50;
+    line-height: 1.6;
+    border-left: 1px solid #4c566a;
+    padding-left: 40px;
+    padding-top: 25px;
+    min-height: 400px; } }
+@media (max-width: 320px) {
+  .content {
+    font: 50 16px/22px "Ubuntu", sans-serif;
+    font-weight: 50;
+    line-height: 1.6;
+    padding-top: 25px;
+    min-height: 400px; } }
 .footer {
   width: 100%; }
 

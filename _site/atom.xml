@@ -4,13 +4,54 @@
  <title>The blog of Jonathan Bayless</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000"/>
- <updated>2020-04-08T20:08:43-04:00</updated>
+ <updated>2020-06-09T14:07:34-04:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Jonathan Bayless</name>
    <email>me@jonathanbayless.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Fixing a soft-bricked Logitech Receiver with fwupdmgr</title>
+   <link href="http://localhost:4000/2020/05/03/bricked-mx-master-receiver.html"/>
+   <updated>2020-05-03T00:00:00-04:00</updated>
+   <id>http://localhost:4000/2020/05/03/bricked-mx-master-receiver</id>
+   <content type="html">&lt;p&gt;I was very excited for the 20.04 LTS release of &lt;a href=&quot;&quot;&gt;Pop!_OS&lt;/a&gt; that came out a few
+days ago. The addition of automatic window tiling and the various GNOME improvements
+that came with the update were well worth the move from 19.10. After a few days
+of using the update I still stand by my opinion that the upgrade was worthwhile,
+but it wasn’t an easy transition.&lt;/p&gt;
+
+&lt;p&gt;For starters, the 20.04 upgrade with &lt;code class=&quot;highlighter-rouge&quot;&gt;pop-upgrade&lt;/code&gt; didn’t like the configuration
+of my computer’s hard-drives in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/fstab&lt;/code&gt; – but that’s understandable given
+that there’s three drives and a mix on windows partitions on the non-boot ones.
+A fresh install took care of that issue, and all of the drives are accessible
+and running fine now. I did not, however, expect that my &lt;a href=&quot;&quot;&gt;Logitech MX MAster 2S&lt;/a&gt;
+mouse would fall victim to the upgrade process.&lt;/p&gt;
+
+&lt;p&gt;Somewhere along the way in the fresh install of Pop!_OS 20.04, the firmware update
+manager utility decided to run. This utility decided that the firmware for the
+Logitech Unifying Receiver, the USB dongle for the mouse, needed updating. That
+would have been fine, except the update encountered an “unexpected error” and cut
+out half-way through the update. This left the mouse dongle unusable and the 
+mouse refused to connect to it.&lt;/p&gt;
+
+&lt;p&gt;A quick check of &lt;code class=&quot;highlighter-rouge&quot;&gt;lsusb | grep Logitech&lt;/code&gt; gave me &lt;code class=&quot;highlighter-rouge&quot;&gt;Bus 003 Device 005: ID 046d:aaac Logitech, Inc. USB BootLoader&lt;/code&gt; where the dongle was plugged in. This was good news in that the dongle
+was still communicating over USB and was not hard-bricked, but it clearly isn’t 
+supposed to be a “BootLoader” device. The Pop!_OS firmware upgrade utility in 
+the Settings menu didn’t show that the device was eligible for an upgrade, but I
+assumed that somehow forcing an update would improve the situation. Thankfully I
+was introduced to the command line version of the update tool from a Stack Overflow
+post. Running &lt;code class=&quot;highlighter-rouge&quot;&gt;fwupdmgr update&lt;/code&gt; turned out to be the solution, it correctly
+identified that the “USB BootLoader” device was supposed to be a Logitech Receiver
+and got it updated. It took a minute to run the upgrade and once it finished I was
+able to connect the mouse to the receiver again.&lt;/p&gt;
+
+&lt;p&gt;Upgrading to Pop!_OS 20.04 was a tumultuous journey for my mouse, but it introduced
+me to the more powerful command line version of the firmware upgrade utility.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Vimwiki + Zettelkasten -- Note Taking Nirvana</title>

@@ -3,6 +3,9 @@ $dark-background: #333;
 $light-text: $nord6;
 $accent: $nord3;
 
+$mobile-min-width: 320px;
+$mobile-max-width: 768px;
+
 * {
   margin: 0;
   padding: 0;
@@ -83,7 +86,7 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 600px;
+  max-width: 100%;
   max-height: 600px;
 }
 
@@ -179,14 +182,25 @@ nav h1, nav h2 {
   font-weight: 600;
 }
 
-.content {
-  font: 50 16px/22px "Ubuntu", sans-serif;
-  font-weight: 50;
-  line-height: 1.6;
-  border-left: 1px solid $accent;
-  padding-left: 40px;
-  padding-top: 25px;
-  min-height: 400px;
+@media(min-width: $mobile-max-width) {
+    .content {
+      font: 50 16px/22px "Ubuntu", sans-serif;
+      font-weight: 50;
+      line-height: 1.6;
+      border-left: 1px solid $accent;
+      padding-left: 40px;
+      padding-top: 25px;
+      min-height: 400px;
+    }
+}
+@media(max-width: $mobile-min-width) {
+    .content {
+      font: 50 16px/22px "Ubuntu", sans-serif;
+      font-weight: 50;
+      line-height: 1.6;
+      padding-top: 25px;
+      min-height: 400px;
+    }
 }
 
 .footer {
@@ -260,16 +274,6 @@ i.fa-hn {
   color: $light-text;
 }
 
-// .home {
-//   font-size: 24px;
-//   float: right;
-//   color: $light-text;
-// }
-
-// .home:hover {
-//   text-decoration: none;
-// }
-
 .disclaimer p {
   margin-top: 5px;
   font-size: 11px;
@@ -322,7 +326,6 @@ sup {
 
 .projects hr {
   border: .5px dashed $nord3;
-  // border: none;
   margin-top: 1em;
   margin-bottom: 1em;
 }
