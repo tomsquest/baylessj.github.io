@@ -10,7 +10,7 @@ title: 'Handwired Iris Keyboard Build'
 Forever in search of the best keyboard, I recently embarked on the journey of
 hand wiring a keyboard. I had been using a [Hot Dox]({% post_url 2019-09-16-hotdox-review %})
 keyboard for the better part of the last year and liked it for the most part. The
-[Ergodox]() layout had two main issues for my uses: 
+[Ergodox](https://ergodox-ez.com/) layout had two main issues for my uses: 
 
 - It was large and had too many keys
 - the thumb cluster wasn't within easy reach for me
@@ -20,8 +20,8 @@ just served to get in the way. The keys on the inside-most column of the 5x7
 layout were nice to use sometimes (I had them mapped to brackets and parentheses)
 but they were a decent stretch so I didn't use them often.
 
-I stumbled across some leftovers from my disorganized intro to keyboard building
-when I got the Hot Dox and discovered the plates for an [Iris Keyboard](https://keeb.io/products/iris-keyboard-split-ergonomic-keyboard). The
+I discovered the plates for an [Iris Keyboard](https://keeb.io/products/iris-keyboard-split-ergonomic-keyboard)
+when rummaging through some spare keyboard parts. The
 Iris is also a split, ortholinear keyboard like the Hot Dox and Ergodox but has 
 a 4x6 grid with only 4 thumb keys. The resulting desk footprint of the Iris is 
 considerably smaller than the Ergodox while still remaining fully functional. 
@@ -31,7 +31,8 @@ allows for all four of the keys to be used rather than just two on the Ergodox.
 The major hurdle for me was the extreme DIY nature of hand wiring the keyboard.
 The Hot Dox was incredibly easy to build by comparison, I didn't have to break 
 out the soldering iron once for that kit. That being said, building the Iris 
-gave me a much better understanding of how keyboards and [QMK](https://docs.qmk.fm/#/) work.
+gave me a much better understanding of how the keyboard and [QMK](https://docs.qmk.fm/#/)
+work. Overall I would recommend the experience but it's definitely not trivial.
 
 ## The Build
 
@@ -116,6 +117,8 @@ can transport the two sides individually if I need to and make the board look
 less like a skunkworks project.
 
 ### Reset Switch
+
+![image reset button](/assets/iris_reset.jpg)
 
 I forgot about this until I went to flash some firmware onto the board; I'd
 recommend taking care of this with the rest of the wiring. I used a momentary
@@ -212,3 +215,4 @@ the number row a bit so that it is in order from 0-9 rather than 1-9 followed by
 This kept the numbers, and more importantly, their symbols, in the same position
 that I was used to on the Hot Dox.
 
+You can view my current keymap for my Iris board in [my fork of QMK](https://github.com/baylessj/qmk_firmware/blob/master/keyboards/keebio/iris/keymaps/baylessj/keymap.c).
