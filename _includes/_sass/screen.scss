@@ -131,6 +131,14 @@ nav h1, nav h2 {
   border: dotted $accent;
   border-width: 1px 0;
   padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bio p {
+  display: inline-block;
+  text-align: center;
 }
 
 #resume {
@@ -139,11 +147,21 @@ nav h1, nav h2 {
   border-bottom: dotted $accent;
   border-width: 1px 0;
   padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#resume a {
+  display: inline-block;
 }
 
 #social {
   margin-bottom: 10px;
   font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #post pre {
@@ -246,19 +264,18 @@ nav h1, nav h2 {
 
 #stalker {
   display: inline-block;
-  height: 18px;
-  margin-left: 5px;
+  height: 48px;
 }
 
 #stalker a {
-  width: 29px;
+  width: 48px;
   overflow: hidden;
-  float: left;
+  float: center;
 }
 
 #stalker i {
-  font-size: 28px;
-  margin-right: 5px;
+  font-size: 36px;
+  margin: 0px 12px;
 }
 
 #stalker a:hover {
