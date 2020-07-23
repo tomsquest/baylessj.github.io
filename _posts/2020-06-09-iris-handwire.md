@@ -5,7 +5,7 @@ categories: []
 title: 'Handwired Iris Keyboard Build'
 ---
 
-![image keyboard photo](/assets/iris1.jpg)
+![image keyboard photo](/assets/img/iris1.jpg)
 
 Forever in search of the best keyboard, I recently embarked on the journey of
 hand wiring a keyboard. I had been using a [Hot Dox]({% post_url 2019-09-16-hotdox-review %})
@@ -50,7 +50,7 @@ I found that I needed the following materials to build the Iris:
 
 ### Assembling the Matrix
 
-![image keyboard matrix](/assets/iris2.jpg)
+![image keyboard matrix](/assets/img/iris2.jpg)
 
 A keyboard tells the computer which key was pressed by sending a logic state "0"
 on the pins that correspond to its position. This requires two electrical
@@ -72,7 +72,7 @@ for the rest of the build to ensure that I would not short out anything.
 
 ### Matrix, Meet Micro
 
-![image keyboard micro connections](/assets/iris3.jpg)
+![image keyboard micro connections](/assets/img/iris3.jpg)
 
 Once the matrix is wired up, each row and each column need connected to a GPIO 
 pin on the microcontroller. I used Pro Micro controllers for each side of the 
@@ -118,7 +118,7 @@ less like a skunkworks project.
 
 ### Reset Switch
 
-![image reset button](/assets/iris_reset.jpg)
+![image reset button](/assets/img/iris_reset.jpg)
 
 I forgot about this until I went to flash some firmware onto the board; I'd
 recommend taking care of this with the rest of the wiring. I used a momentary

@@ -9,7 +9,7 @@ categories: []
 title: 'Alpaca Keyboards Hot Dox Review'
 ---
 
-![image keyboard photo](/assets/keyboard1.jpg)
+![image keyboard photo](/assets/img/keyboard1.jpg)
 
 I recently picked up a [Hot Dox](https://www.alpacakeyboards.com/) keyboard from [Alpaca Keyboards](https://www.alpacakeyboards.com/) as my introduction to the world of split ergonomic keyboards. My primary goals in moving from a traditional mechanical keyboard were to get an improvement in ergonomics and to get much more customization potential than I had with my current keyboards. The Hot Dox is acceptable on the ergonomics front and excellent on the customization front due to its use of the [QMK Firmware](https://qmk.fm/).
 
@@ -37,7 +37,7 @@ You can find my QMK configuration file on my [github](https://github.com/bayless
 
 ### Tenting Modification
 
-![image tented keyboard macro shot](/assets/keyboard2.jpg)
+![image tented keyboard macro shot](/assets/img/keyboard2.jpg)
 
 I made one minor modification to my assembly of the keyboard that has made a decent improvement in my impression of its ergonomics. One popular configuration with split keyboards is a _tented_ configuration where the inside edge of each of the keyboard halves is raised somewhat. This puts your hands at a slight angle, which is a more natural way for them to sit. Some keyboards allow this behavior by default, such as the [Ergodox](https://ergodox-ez.com/), but the Hot Dox does not.
 

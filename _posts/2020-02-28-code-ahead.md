@@ -5,7 +5,7 @@ categories:
   - blog
 ---
 
-<img src="/assets/codeahead.png"/>
+<img src="/assets/img/codeahead.png"/>
 
 # Code Ahead - A Painful Read That Makes Some Valid Points
 
