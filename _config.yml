@@ -5,3 +5,14 @@ lsi: false
 exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
 sass:
     sass_dir: _includes/_sass
+
+# Responsive Images
+image_url: /assets/img 
+# amp_base?
+default_width: '640'
+sizes: '(min-width: 640px) 60vw, 90vw'
+
+srcset:
+  - 360
+  - 480
+  - 640

@@ -4,7 +4,7 @@
  <title>The blog of Jonathan Bayless</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000"/>
- <updated>2020-07-23T19:28:32-04:00</updated>
+ <updated>2020-07-24T16:42:40-04:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Jonathan Bayless</name>
@@ -17,7 +17,8 @@
    <link href="http://localhost:4000/2020/06/09/iris-handwire.html"/>
    <updated>2020-06-09T00:00:00-04:00</updated>
    <id>http://localhost:4000/2020/06/09/iris-handwire</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/iris1.jpg&quot; alt=&quot;image keyboard photo&quot; /&gt;&lt;/p&gt;
+   <content type="html">
+&lt;p&gt;&lt;img src=&quot;/assets/img/iris1.jpg&quot; sizes=&quot;`(min-width: 640px) 60vw, 90vw&quot; srcset=&quot;/assets/img/360/iris1.jpg 360w, /assets/img/480/iris1.jpg 480w, /assets/img/640/iris1.jpg 640w&quot; alt=&quot;Handwired Iris Keyboard&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Forever in search of the best keyboard, I recently embarked on the journey of
 hand wiring a keyboard. I had been using a &lt;a href=&quot;/2019/09/16/hotdox-review.html&quot;&gt;Hot Dox&lt;/a&gt;
@@ -66,7 +67,7 @@ work. Overall I would recommend the experience but it’s definitely not trivial
 
 &lt;h3 id=&quot;assembling-the-matrix&quot;&gt;Assembling the Matrix&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/iris2.jpg&quot; alt=&quot;image keyboard matrix&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/iris2.jpg&quot; sizes=&quot;`(min-width: 640px) 60vw, 90vw&quot; srcset=&quot;/assets/img/360/iris2.jpg 360w, /assets/img/480/iris2.jpg 480w, /assets/img/640/iris2.jpg 640w&quot; alt=&quot;keyboard matrix&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;A keyboard tells the computer which key was pressed by sending a logic state “0”
 on the pins that correspond to its position. This requires two electrical
@@ -88,7 +89,7 @@ for the rest of the build to ensure that I would not short out anything.&lt;/p&g
 
 &lt;h3 id=&quot;matrix-meet-micro&quot;&gt;Matrix, Meet Micro&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/iris3.jpg&quot; alt=&quot;image keyboard micro connections&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/iris3.jpg&quot; sizes=&quot;`(min-width: 640px) 60vw, 90vw&quot; srcset=&quot;/assets/img/360/iris3.jpg 360w, /assets/img/480/iris3.jpg 480w, /assets/img/640/iris3.jpg 640w&quot; alt=&quot;keyboard micro connections&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Once the matrix is wired up, each row and each column need connected to a GPIO 
 pin on the microcontroller. I used Pro Micro controllers for each side of the 
@@ -134,7 +135,7 @@ less like a skunkworks project.&lt;/p&gt;
 
 &lt;h3 id=&quot;reset-switch&quot;&gt;Reset Switch&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/iris_reset.jpg&quot; alt=&quot;image reset button&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/iris_reset.jpg&quot; sizes=&quot;`(min-width: 640px) 60vw, 90vw&quot; srcset=&quot;/assets/img/360/iris_reset.jpg 360w, /assets/img/480/iris_reset.jpg 480w, /assets/img/640/iris_reset.jpg 640w&quot; alt=&quot;reset button&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I forgot about this until I went to flash some firmware onto the board; I’d
 recommend taking care of this with the rest of the wiring. I used a momentary
@@ -350,7 +351,8 @@ tech stack.&lt;/p&gt;
    <link href="http://localhost:4000/blog/2020/02/28/code-ahead.html"/>
    <updated>2020-02-28T00:00:00-05:00</updated>
    <id>http://localhost:4000/blog/2020/02/28/code-ahead</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/codeahead.png&quot; /&gt;&lt;/p&gt;
+   <content type="html">
+&lt;p&gt;&lt;img src=&quot;/assets/img/codeahead.png&quot; sizes=&quot;`(min-width: 640px) 60vw, 90vw&quot; srcset=&quot;/assets/img/360/codeahead.png 360w, /assets/img/480/codeahead.png 480w, /assets/img/640/codeahead.png 640w&quot; alt=&quot;Code Ahead Book Cover&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;code-ahead---a-painful-read-that-makes-some-valid-points&quot;&gt;Code Ahead - A Painful Read That Makes Some Valid Points&lt;/h1&gt;
 
@@ -412,7 +414,8 @@ in my &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; and ev
    <link href="http://localhost:4000/2019/09/16/hotdox-review.html"/>
    <updated>2019-09-16T00:00:00-04:00</updated>
    <id>http://localhost:4000/2019/09/16/hotdox-review</id>
-   <content type="html">&lt;p&gt;&lt;img src=&quot;/assets/img/keyboard1.jpg&quot; alt=&quot;image keyboard photo&quot; /&gt;&lt;/p&gt;
+   <content type="html">
+&lt;p&gt;&lt;img src=&quot;/assets/img/keyboard1.jpg&quot; sizes=&quot;`(min-width: 640px) 60vw, 90vw&quot; srcset=&quot;/assets/img/360/keyboard1.jpg 360w, /assets/img/480/keyboard1.jpg 480w, /assets/img/640/keyboard1.jpg 640w&quot; alt=&quot;keyboard photo&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I recently picked up a &lt;a href=&quot;https://www.alpacakeyboards.com/&quot;&gt;Hot Dox&lt;/a&gt; keyboard from &lt;a href=&quot;https://www.alpacakeyboards.com/&quot;&gt;Alpaca Keyboards&lt;/a&gt; as my introduction to the world of split ergonomic keyboards. My primary goals in moving from a traditional mechanical keyboard were to get an improvement in ergonomics and to get much more customization potential than I had with my current keyboards. The Hot Dox is acceptable on the ergonomics front and excellent on the customization front due to its use of the &lt;a href=&quot;https://qmk.fm/&quot;&gt;QMK Firmware&lt;/a&gt;.&lt;/p&gt;
 
@@ -440,7 +443,7 @@ in my &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; and ev
 
 &lt;h3 id=&quot;tenting-modification&quot;&gt;Tenting Modification&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/keyboard2.jpg&quot; alt=&quot;image tented keyboard macro shot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/keyboard2.jpg&quot; sizes=&quot;`(min-width: 640px) 60vw, 90vw&quot; srcset=&quot;/assets/img/360/keyboard2.jpg 360w, /assets/img/480/keyboard2.jpg 480w, /assets/img/640/keyboard2.jpg 640w&quot; alt=&quot;tented keyboard macro shot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I made one minor modification to my assembly of the keyboard that has made a decent improvement in my impression of its ergonomics. One popular configuration with split keyboards is a &lt;em&gt;tented&lt;/em&gt; configuration where the inside edge of each of the keyboard halves is raised somewhat. This puts your hands at a slight angle, which is a more natural way for them to sit. Some keyboards allow this behavior by default, such as the &lt;a href=&quot;https://ergodox-ez.com/&quot;&gt;Ergodox&lt;/a&gt;, but the Hot Dox does not.&lt;/p&gt;
 

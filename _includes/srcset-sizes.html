@@ -1,0 +1,8 @@
+<img
+    src="{{ site.image_url }}/{{ image.src }}"
+    id="{{ include.id }}"
+    sizes="`{{ site.sizes }}"
+    srcset="{% for width in site.srcset %}{{ site.image_url }}/{{ width }}/{{ image.src }} {{ width }}w{% if forloop.last == false %}, {% endif %}{% endfor %}"
+    alt="{{ image.alt }}">
+
+

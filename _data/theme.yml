@@ -3,6 +3,10 @@
 # Color for top bar, links, etc
 highlight_color: '#5e81ac'
 
+profile_image:
+  - src: me_square.jpg
+    alt: Blog Logo
+
 # Profile links on the left sidebar, leave blank to ignore
 social:
   github: baylessj

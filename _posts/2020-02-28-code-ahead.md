@@ -3,9 +3,13 @@ layout: post
 title: Code Ahead - A Painful Read That Makes Some Valid Points 
 categories:
   - blog
+image:
+  - src: codeahead.png 
+    alt: Code Ahead Book Cover
 ---
 
-<img src="/assets/img/codeahead.png"/>
+{% assign image=page.image[0] %}
+{% include srcset-sizes.html %}
 
 # Code Ahead - A Painful Read That Makes Some Valid Points
 

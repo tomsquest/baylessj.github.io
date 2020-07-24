@@ -1,0 +1,6 @@
+{% assign img_name = {{ include.url }} | split: "." %}
+<p>{{img_name[0]}}</p>
+{% assign img_small = {{ img_name[0] }} | append: "-sm" | append: {{ img_name[1] }} %}
+{% assign img_med = {{ img_name[0] }} | append: "-med" | append: {{ img_name[1] }} %}
+{% assign img_large = {{ img_name[0] }} | append: "-lg" | append: {{ img_name[1] }} %}
+<img src="{{ include.url }}" srcset="{{ img_small }} 180w, {{ img_med }} 480w, {{ img_large }} 600w" sizes="80vw" alt="{{ include.alt }}"/>

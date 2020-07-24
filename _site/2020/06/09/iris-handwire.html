@@ -27,7 +27,17 @@
       <nav>
   <h1> </h1>
   <a href="/">
-    <img src="http://localhost:4000/assets/img/me_square.jpg" id="logo" alt="Blog logo"/>
+       
+      <img
+    src="/assets/img/me_square.jpg"
+    id="logo"
+    sizes="`(min-width: 640px) 60vw, 90vw"
+    srcset="/assets/img/360/me_square.jpg 360w, /assets/img/480/me_square.jpg 480w, /assets/img/640/me_square.jpg 640w"
+    alt="Blog Logo">
+
+
+
+    <!-- <img src="http://localhost:4000/assets/img/me_square.jpg" id="logo" alt="Blog logo"/> -->
   </a>
   <h2>I'm <br>
     <a href="/">Jonathan Bayless</a>.</h2>
@@ -93,7 +103,8 @@
 <h1 class="title">Handwired Iris Keyboard Build</h1>
 
 <div id="post">
-  <p><img src="/assets/img/iris1.jpg" alt="image keyboard photo" /></p>
+  
+<p><img src="/assets/img/iris1.jpg" sizes="`(min-width: 640px) 60vw, 90vw" srcset="/assets/img/360/iris1.jpg 360w, /assets/img/480/iris1.jpg 480w, /assets/img/640/iris1.jpg 640w" alt="Handwired Iris Keyboard" /></p>
 
 <p>Forever in search of the best keyboard, I recently embarked on the journey of
 hand wiring a keyboard. I had been using a <a href="/2019/09/16/hotdox-review.html">Hot Dox</a>
@@ -142,7 +153,7 @@ work. Overall I would recommend the experience but it’s definitely not trivial
 
 <h3 id="assembling-the-matrix">Assembling the Matrix</h3>
 
-<p><img src="/assets/img/iris2.jpg" alt="image keyboard matrix" /></p>
+<p><img src="/assets/img/iris2.jpg" sizes="`(min-width: 640px) 60vw, 90vw" srcset="/assets/img/360/iris2.jpg 360w, /assets/img/480/iris2.jpg 480w, /assets/img/640/iris2.jpg 640w" alt="keyboard matrix" /></p>
 
 <p>A keyboard tells the computer which key was pressed by sending a logic state “0”
 on the pins that correspond to its position. This requires two electrical
@@ -164,7 +175,7 @@ for the rest of the build to ensure that I would not short out anything.</p>
 
 <h3 id="matrix-meet-micro">Matrix, Meet Micro</h3>
 
-<p><img src="/assets/img/iris3.jpg" alt="image keyboard micro connections" /></p>
+<p><img src="/assets/img/iris3.jpg" sizes="`(min-width: 640px) 60vw, 90vw" srcset="/assets/img/360/iris3.jpg 360w, /assets/img/480/iris3.jpg 480w, /assets/img/640/iris3.jpg 640w" alt="keyboard micro connections" /></p>
 
 <p>Once the matrix is wired up, each row and each column need connected to a GPIO 
 pin on the microcontroller. I used Pro Micro controllers for each side of the 
@@ -210,7 +221,7 @@ less like a skunkworks project.</p>
 
 <h3 id="reset-switch">Reset Switch</h3>
 
-<p><img src="/assets/img/iris_reset.jpg" alt="image reset button" /></p>
+<p><img src="/assets/img/iris_reset.jpg" sizes="`(min-width: 640px) 60vw, 90vw" srcset="/assets/img/360/iris_reset.jpg 360w, /assets/img/480/iris_reset.jpg 480w, /assets/img/640/iris_reset.jpg 640w" alt="reset button" /></p>
 
 <p>I forgot about this until I went to flash some firmware onto the board; I’d
 recommend taking care of this with the rest of the wiring. I used a momentary

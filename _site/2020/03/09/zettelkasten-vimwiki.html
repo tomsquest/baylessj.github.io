@@ -27,7 +27,17 @@
       <nav>
   <h1> </h1>
   <a href="/">
-    <img src="http://localhost:4000/assets/img/me_square.jpg" id="logo" alt="Blog logo"/>
+       
+      <img
+    src="/assets/img/me_square.jpg"
+    id="logo"
+    sizes="`(min-width: 640px) 60vw, 90vw"
+    srcset="/assets/img/360/me_square.jpg 360w, /assets/img/480/me_square.jpg 480w, /assets/img/640/me_square.jpg 640w"
+    alt="Blog Logo">
+
+
+
+    <!-- <img src="http://localhost:4000/assets/img/me_square.jpg" id="logo" alt="Blog logo"/> -->
   </a>
   <h2>I'm <br>
     <a href="/">Jonathan Bayless</a>.</h2>
