@@ -6,7 +6,7 @@ title: Vimwiki + Zettelkasten -- Note Taking Nirvana
 
 I've been in a time of turmoil with note taking and text editing. I bounced around
 between a few different editors before landing on Vim full-time. I experimented
-with a [gitbook](gitbook.com), I used [Joplin](joplinapp.org) for a bit, and I wrote a lot down on paper
+with a [gitbook](https://gitbook.com), I used [Joplin](https://joplinapp.org) for a bit, and I wrote a lot down on paper
 and post-it notes. As much as I love using pen and paper, I need to take notes
 on a computer to ensure that they'll be with me everywhere. I looked for a way
 to keep my notes in one place and, ideally, in one file. The **Zettelkasten**
