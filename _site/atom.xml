@@ -4,7 +4,7 @@
  <title>The blog of Jonathan Bayless</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000"/>
- <updated>2020-07-24T16:42:40-04:00</updated>
+ <updated>2020-08-12T19:52:18-04:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Jonathan Bayless</name>
@@ -284,7 +284,7 @@ me to the more powerful command line version of the firmware upgrade utility.&lt
    <id>http://localhost:4000/2020/03/09/zettelkasten-vimwiki</id>
    <content type="html">&lt;p&gt;I’ve been in a time of turmoil with note taking and text editing. I bounced around
 between a few different editors before landing on Vim full-time. I experimented
-with a &lt;a href=&quot;gitbook.com&quot;&gt;gitbook&lt;/a&gt;, I used &lt;a href=&quot;joplinapp.org&quot;&gt;Joplin&lt;/a&gt; for a bit, and I wrote a lot down on paper
+with a &lt;a href=&quot;https://gitbook.com&quot;&gt;gitbook&lt;/a&gt;, I used &lt;a href=&quot;https://joplinapp.org&quot;&gt;Joplin&lt;/a&gt; for a bit, and I wrote a lot down on paper
 and post-it notes. As much as I love using pen and paper, I need to take notes
 on a computer to ensure that they’ll be with me everywhere. I looked for a way
 to keep my notes in one place and, ideally, in one file. The &lt;strong&gt;Zettelkasten&lt;/strong&gt;
