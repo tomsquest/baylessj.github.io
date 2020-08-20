@@ -1,5 +1,6 @@
 ---
-tags: book-review 
+layout: post
+tags: [book-review]
 title: Book Review: The Design of Everyday Things
 author: Don Norman
 ---
