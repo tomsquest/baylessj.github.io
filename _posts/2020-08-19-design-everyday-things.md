@@ -4,6 +4,8 @@ title: Book Review: The Design of Everyday Things
 author: Don Norman
 ---
 
+# Book Review: The Design of Everyday Things
+
 I've heard The Design of Everyday Things recommended a number of times and recently picked up a copy. This book was my introduction to design theory; the most in-depth information I had gotten on design up until this had come from blog posts. I don't have much to compare the book to as a result but I found a lot of valuable information from it.
 
 ## Major Points
