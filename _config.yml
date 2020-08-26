@@ -4,13 +4,15 @@ url: https://jonathanbayless.com
 lsi: false
 exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
 sass:
-    sass_dir: _includes/_sass
+  sass_dir: _includes/_sass
+
+plugins:
+  - jekyll-hn-comments
 
 # Responsive Images
-image_url: /assets/img 
-# amp_base?
-default_width: '640'
-sizes: '(min-width: 640px) 60vw, 90vw'
+image_url: /assets/img
+default_width: "640"
+sizes: "(min-width: 640px) 60vw, 90vw"
 
 srcset:
   - 360

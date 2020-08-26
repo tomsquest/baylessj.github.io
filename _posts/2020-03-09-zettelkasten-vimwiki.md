@@ -2,6 +2,7 @@
 layout: post
 tages: [productivity]
 title: Vimwiki + Zettelkasten -- Note Taking Nirvana
+hn-id: 22637482
 ---
 
 I've been in a time of turmoil with note taking and text editing. I bounced around

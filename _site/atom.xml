@@ -4,13 +4,78 @@
  <title>The blog of Jonathan Bayless</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000"/>
- <updated>2020-08-12T19:52:18-04:00</updated>
+ <updated>2020-08-26T16:24:08-04:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Jonathan Bayless</name>
    <email>me@jonathanbayless.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Book Review -- The Design of Everyday Things</title>
+   <link href="http://localhost:4000/2020/08/19/design-everyday-things.html"/>
+   <updated>2020-08-19T00:00:00-04:00</updated>
+   <id>http://localhost:4000/2020/08/19/design-everyday-things</id>
+   <content type="html">&lt;p&gt;I’ve heard The Design of Everyday Things recommended a number of times and recently picked up a copy. This book was my introduction to design theory; the most in-depth information I had gotten on design up until this had come from blog posts. I don’t have much to compare the book to as a result but I found a lot of valuable information from it.&lt;/p&gt;
+
+&lt;h2 id=&quot;major-points&quot;&gt;Major Points&lt;/h2&gt;
+
+&lt;p&gt;The book started out by laying the groundwork for the terminology used in the book. The clarification of “affordances” and “signifiers” was helpful given my lack of background knowledge. The two terms are often conflated as the same but the author noted that it is important to recognize their differences. &lt;em&gt;Affordances&lt;/em&gt; are the abstract utilities provided by the product whereas &lt;em&gt;signifiers&lt;/em&gt; are the aspects of the product that explain its abilities either directly or indirectly. The key to good design, Norman explains, is in creating useful and easily understood signifiers.&lt;/p&gt;
+
+&lt;p&gt;One other fundamental point that Norman reiterated throughout the book was that there is no such thing as “Human Error”. Many times we will blame faults on human error when the root cause was actually bad design. People tend to act in good faith and mistakes can be avoided or mitigated with well designed products.&lt;/p&gt;
+
+&lt;h2 id=&quot;action-items&quot;&gt;Action Items&lt;/h2&gt;
+
+&lt;p&gt;Norman built on these ideas to provide actionable items for improving product design. He spent a lot of the book discussing &lt;em&gt;mappings&lt;/em&gt; or the relationship between controls and their effects. The common example used for this was a stovetop and its burners. It would be clearest if the heat control for each burner could be physically attached to the burner it controls, but obviously this is impractical. The next best solution would be to mount the dial very physically close to the burner it controls, but that does not always fit with the overall layout of the stove. The next best, and most common, solution is to arrange the dials in the same &lt;em&gt;shape&lt;/em&gt; as the burner arrangement. We can easily determine which dial controls which burner if they are in a clear shape.&lt;/p&gt;
+
+&lt;p&gt;One other means of ensuring that mistakes are not made is by enforcing constraints on the product’s abilities. The clearest example to me was the reminder to save a document when closing out a text editor. The program does not allow you to exit the program in one click because it can often result in a mistake of failing to save the work that was done.&lt;/p&gt;
+
+&lt;h2 id=&quot;impressions&quot;&gt;Impressions&lt;/h2&gt;
+
+&lt;p&gt;I found the book to be pleasantly dense with information and there were a lot of good takeaways. This did make for a rather dry read at times, however, and I didn’t find the book to be as entertaining as I thought it would be. It’s a good middle ground between a textbook on design and a casual book or blog post.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Zettelkasten Tooling Updates</title>
+   <link href="http://localhost:4000/2020/08/07/zettelkasten-foam.html"/>
+   <updated>2020-08-07T00:00:00-04:00</updated>
+   <id>http://localhost:4000/2020/08/07/zettelkasten-foam</id>
+   <content type="html">&lt;p&gt;While I had posted &lt;a href=&quot;https://jonathanbayless.com/2020/03/09/zettelkasten-vimwiki.html&quot;&gt;before&lt;/a&gt; about how I felt that I had found the ideal tooling for my &lt;a href=&quot;https://zettelkasten.de&quot;&gt;Zettelkasten&lt;/a&gt; in &lt;a href=&quot;https://vimwiki.github.io&quot;&gt;VimWiki&lt;/a&gt;, I hit some growing pains with the toolset as I continued to add to my notes. When my notes were fairly small it made a lot of sense to keep all of the notes in one, large document, but that got to be difficult to work with. My Zettelkasten is still far from huge compared to the examples of others on the internet; it is around 250 unique notes at the time of writing. I bounced around to a couple other tools when I decided to move away from VimWiki and I am happily (for now, I suppose) using &lt;a href=&quot;https://foambubble.github.io&quot;&gt;Foam&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;attempts-to-scale-vimwiki&quot;&gt;Attempts to scale VimWiki&lt;/h2&gt;
+
+&lt;p&gt;I don’t intend to imply that I jumped ship from VimWiki as soon as editing my notes became the slightest bit difficult, quite the opposite in fact. I prefer using Vim for most of my text editing needs so staying in Vim to edit my notes reduced the resistance for switching mental modes to taking notes from my usual code writing. I found two additions to my VimWiki workflow that made editing easier.&lt;/p&gt;
+
+&lt;p&gt;The first addition was isn’t a dedicated tool, really, but was a new addition to my Vim skills. I learned more about folding sections in Vim and set up my config to indent VimWiki headers. This allowed me to reduce the visual clutter of the many notes in the wiki file. This created a new problem, though, because I used the first line or two of each note as a way of determining what it was about when adding backlinks. This meant that I had to constantly fold and unfold notes, defeating most of the approach’s benefits.&lt;/p&gt;
+
+&lt;p&gt;The second addition was an &lt;a href=&quot;https://gist.github.com/EinfachTool/9071573&quot;&gt;excellent plugin&lt;/a&gt; for Vim that allowed me to view the VimWiki headers in a standard ctags sidebar. This made it possible to see the hierarchy of notes based on their Zettelkasten tags in a simple viewer. This had the same issue as the folding addition, though, in that I couldn’t see the description when trying to make links between documents. It was an improvement but I still struggled to find the right place to add new notes and to find existing notes when creating links.&lt;/p&gt;
+
+&lt;h2 id=&quot;restructuring-to-one-file-per-note&quot;&gt;Restructuring to one file per note&lt;/h2&gt;
+
+&lt;p&gt;It became pretty clear that the recommended folder structure for a Zettelkasten in most tools is to use one markdown file for each note. This adds a bit more of a clear hierarchical structure to the notes than Luhman seemed to recommend in his personal Zettelkasten, but I actually have found this structure to be an improvement. The consensus seems to be a bit split on file naming, whether to use descriptive names or just the Zettelkasten identifier. I chose to put both in the file name, and so far it has made for a nice balance of easy discoverability of the note’s topic and conciseness. The recommended structure for &lt;a href=&quot;https://dendron.so&quot;&gt;Dendron&lt;/a&gt; used one large root folder and dots to indicate the document hierarchy. I found this large folder to have many of the same shortcomings that the single VimWiki had, it was hard to navigate. The nested folder structure gave me the ability to easily find notes and only see the notes that I was concerned with.&lt;/p&gt;
+
+&lt;h2 id=&quot;obsidian&quot;&gt;Obsidian&lt;/h2&gt;
+
+&lt;p&gt;I found out about &lt;a href=&quot;https://obsidian.md&quot;&gt;Obsidian&lt;/a&gt; from their beta announcement on Hacker News right around the time that I started to hit those growing pains with VimWiki. This convenient timing combined with the excellent feature set of Obsidian’s app made it a perfect choice for switching away from VimWiki. I was more easily able to create and edit links in Obsidian and the Obsidian editor added a very neat graph view showing the relationship between notes. This graph view helped cement for me the idea that the Zettelkasten should be a “second brain” with each note as a neuron connecting to others to form a brain-like network.&lt;/p&gt;
+
+&lt;p&gt;It was much easier to add a lot more information to my Zettelkasten when using Obsidian as the editor. The folder based structure made it easier to find the right place to add items and the autocompletion for adding links between notes helped me connect notes better than before. The autocompletion wasn’t great though; it seemed to look for any note name that contained one of the letters in the search rather than considering the search to be a real word. This behavior meant that I often had to type out the whole name of the note anyways.&lt;/p&gt;
+
+&lt;h2 id=&quot;dendron&quot;&gt;Dendron&lt;/h2&gt;
+
+&lt;p&gt;My issues with the link autocompletion and a worry about Obsidian’s licensing with work-related notes led me to look further for a similar Zettelkasten tool. I also discovered &lt;a href=&quot;https://dendron.so&quot;&gt;Dendron&lt;/a&gt; through a Hacker News post and liked that it was built on Visual Studio Code rather than a standalone editor. Visual Studio Code is my other editor of choice along with Vim so using a Zettelkasten tool in VSCode would give me that same-environment benefit that VimWiki had. Switching to Visual Studio Code brought back a number of of convenient text editing shortcuts that I hadn’t realized I had missed until I switched, namely the ability to delete a whole line in a keyboard shortcut.&lt;/p&gt;
+
+&lt;p&gt;Dendron’s link autocompletion also seemed to have issues, though. It wouldn’t split up search queries into individual letters like Obsidian, thankfully, but often the plugin would crash or would it fail to redirect me to the linked file properly. The graph view would similarly crash quite often. This is all understandable given that Dendron is in a beta stage currently, but I was a bit frustrated with the instability given how much I relied on the tool for note taking.&lt;/p&gt;
+
+&lt;h2 id=&quot;foam&quot;&gt;Foam&lt;/h2&gt;
+
+&lt;p&gt;Once again, I found a new option for my Zettelkasten through a Hacker News post. This time the tool was a very similar alternative to Dendron, a set of Visual Studio Code plugins called &lt;a href=&quot;https://foambubble.github.io&quot;&gt;Foam&lt;/a&gt;. Foam covered a similar feature set as Obsidian and Dendron with the addition of a Jekyll/Github Pages integration. I hope to, at some point, clean up my Zettelkasten and get it added to my personal site here since it can be added to a Jekyll site. Foam didn’t add much other new functionality besides that, but so far Foam has been able to reliably handle my ever-growing Zettelkasten with no crashes or major bugs. The link autocompletion is &lt;em&gt;excellent&lt;/em&gt; so I am able to write links to other documents without the cognitive overload of trying to remember their Zettelkasten identifiers. The graph view isn’t quite as nice as Obsidian’s but it does the trick, showing me what notes have proper links and which ones need some attention.&lt;/p&gt;
+
+&lt;p&gt;Overall, I’m very happy with Foam. The other tools I tested along the way were suitable but I’ve found a great fit for my workflow in Foam. I’ll be sure to report back with a follow-up blog post again as my notes grow further, hopefully I’ll be able to report that Foam still fits my needs.&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Handwired Iris Keyboard Build</title>
@@ -30,22 +95,22 @@ keyboard for the better part of the last year and liked it for the most part. Th
   &lt;li&gt;the thumb cluster wasn’t within easy reach for me&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I only ever used the two “2u” sized thumb keys so the rest of the thumb cluster 
-just served to get in the way. The keys on the inside-most column of the 5x7 
+&lt;p&gt;I only ever used the two “2u” sized thumb keys so the rest of the thumb cluster
+just served to get in the way. The keys on the inside-most column of the 5x7
 layout were nice to use sometimes (I had them mapped to brackets and parentheses)
 but they were a decent stretch so I didn’t use them often.&lt;/p&gt;
 
 &lt;p&gt;I discovered the plates for an &lt;a href=&quot;https://keeb.io/products/iris-keyboard-split-ergonomic-keyboard&quot;&gt;Iris Keyboard&lt;/a&gt;
 when rummaging through some spare keyboard parts. The
-Iris is also a split, ortholinear keyboard like the Hot Dox and Ergodox but has 
-a 4x6 grid with only 4 thumb keys. The resulting desk footprint of the Iris is 
-considerably smaller than the Ergodox while still remaining fully functional. 
+Iris is also a split, ortholinear keyboard like the Hot Dox and Ergodox but has
+a 4x6 grid with only 4 thumb keys. The resulting desk footprint of the Iris is
+considerably smaller than the Ergodox while still remaining fully functional.
 In my opinion, the thumb cluster is more ergonomically designed and actually
 allows for all four of the keys to be used rather than just two on the Ergodox.&lt;/p&gt;
 
 &lt;p&gt;The major hurdle for me was the extreme DIY nature of hand wiring the keyboard.
-The Hot Dox was incredibly easy to build by comparison, I didn’t have to break 
-out the soldering iron once for that kit. That being said, building the Iris 
+The Hot Dox was incredibly easy to build by comparison, I didn’t have to break
+out the soldering iron once for that kit. That being said, building the Iris
 gave me a much better understanding of how the keyboard and &lt;a href=&quot;https://docs.qmk.fm/#/&quot;&gt;QMK&lt;/a&gt;
 work. Overall I would recommend the experience but it’s definitely not trivial.&lt;/p&gt;
 
@@ -72,18 +137,18 @@ work. Overall I would recommend the experience but it’s definitely not trivial
 &lt;p&gt;A keyboard tells the computer which key was pressed by sending a logic state “0”
 on the pins that correspond to its position. This requires two electrical
 characteristics – pressing the switch must close a circuit to send a “0” instead
-of “1” like it would normally and there must be some way to locate what switch 
-was pressed. We identify the key’s location by creating a “matrix” where each 
+of “1” like it would normally and there must be some way to locate what switch
+was pressed. We identify the key’s location by creating a “matrix” where each
 key lies on a column and a row. Each key in a given column is wired together and
 each key on a given row is wired together.&lt;/p&gt;
 
 &lt;p&gt;Each key needs its own diode connected to its row to ensure that other key presses
-don’t interfere with this key’s ability to send its location. The writeup on 
-&lt;a href=&quot;http://blog.komar.be/how-to-make-a-keyboard-the-matrix/&quot;&gt;Komar’s Techblog&lt;/a&gt; 
-goes more into detail about how this matrix design allows for n-key rollover, 
+don’t interfere with this key’s ability to send its location. The writeup on
+&lt;a href=&quot;http://blog.komar.be/how-to-make-a-keyboard-the-matrix/&quot;&gt;Komar’s Techblog&lt;/a&gt;
+goes more into detail about how this matrix design allows for n-key rollover,
 or NKRO.&lt;/p&gt;
 
-&lt;p&gt;I used the approach where the legs of the diode for the row wiring and found it 
+&lt;p&gt;I used the approach where the legs of the diode for the row wiring and found it
 to be good solution. The diode legs are not insulated so I used insulating wires
 for the rest of the build to ensure that I would not short out anything.&lt;/p&gt;
 
@@ -91,42 +156,42 @@ for the rest of the build to ensure that I would not short out anything.&lt;/p&g
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/iris3.jpg&quot; sizes=&quot;`(min-width: 640px) 60vw, 90vw&quot; srcset=&quot;/assets/img/360/iris3.jpg 360w, /assets/img/480/iris3.jpg 480w, /assets/img/640/iris3.jpg 640w&quot; alt=&quot;keyboard micro connections&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Once the matrix is wired up, each row and each column need connected to a GPIO 
-pin on the microcontroller. I used Pro Micro controllers for each side of the 
-keyboard. It is possible to avoid using two micros with some complicated wiring 
+&lt;p&gt;Once the matrix is wired up, each row and each column need connected to a GPIO
+pin on the microcontroller. I used Pro Micro controllers for each side of the
+keyboard. It is possible to avoid using two micros with some complicated wiring
 but I found that it was much easier to use a dedicated micro for each side.&lt;/p&gt;
 
-&lt;p&gt;The ribbon cable made this step much cleaner than it would have been with the 
-thicker wire I used for the matrix. In addition to easily organizing the cable 
+&lt;p&gt;The ribbon cable made this step much cleaner than it would have been with the
+thicker wire I used for the matrix. In addition to easily organizing the cable
 on the edge of the keys the ribbon cable folded over on itself very nicely when
 attaching the bottom plate. The Iris is not a very thick keyboard so there was
 not much additional depth left between the micro and the switches.&lt;/p&gt;
 
 &lt;h4 id=&quot;important-note&quot;&gt;Important Note&lt;/h4&gt;
 
-&lt;p&gt;I made a mistake on this step of the wiring on my first attempt. It is quite 
-convenient to use the legs of the switches as a joint where wires will connect 
-and be soldered together, but this does &lt;strong&gt;not&lt;/strong&gt; work for the row connections. 
+&lt;p&gt;I made a mistake on this step of the wiring on my first attempt. It is quite
+convenient to use the legs of the switches as a joint where wires will connect
+and be soldered together, but this does &lt;strong&gt;not&lt;/strong&gt; work for the row connections.
 I had originally soldered my row connections to the row-side leg of one of the
 switches, but that prevented the other keys on the row from sending presses.
-This is because the key’s diode was preventing current from flowing from the other 
+This is because the key’s diode was preventing current from flowing from the other
 switches to the row connection. I moved the solder joint for the row connections
 to one of the diode legs and everything worked nicely.&lt;/p&gt;
 
 &lt;h3 id=&quot;bridging-the-gap&quot;&gt;Bridging the Gap&lt;/h3&gt;
 
 &lt;p&gt;The two sides each have their own microcontroller so they can work on their own
-but we need them to talk to the computer through just one side. The two sides can 
+but we need them to talk to the computer through just one side. The two sides can
 either use “soft serial” comms over three wires to talk to each other or they
-can talk over &lt;a href=&quot;https://en.wikipedia.org/wiki/I%C2%B2C&quot;&gt;I2C&lt;/a&gt; with four wires.  &lt;br /&gt;
-I had a &lt;a href=&quot;https://www.cablechick.com.au/blog/understanding-trrs-and-audio-jacks/&quot;&gt;TRRS&lt;/a&gt; cable and associated 
+can talk over &lt;a href=&quot;https://en.wikipedia.org/wiki/I%C2%B2C&quot;&gt;I2C&lt;/a&gt; with four wires.&lt;br /&gt;
+I had a &lt;a href=&quot;https://www.cablechick.com.au/blog/understanding-trrs-and-audio-jacks/&quot;&gt;TRRS&lt;/a&gt; cable and associated
 jacks sitting around so I opted to use I2C over its four wires. The jacks that I
-had were incredibly snug fitting on the cable though, and I ended up with a whole 
+had were incredibly snug fitting on the cable though, and I ended up with a whole
 bunch of issues getting a connection between the two sides. The TRRS cable seems
-like a better option in general compared to alternatives like an RJ45 cable or 
+like a better option in general compared to alternatives like an RJ45 cable or
 similar but my hardware was not so great.&lt;/p&gt;
 
-&lt;p&gt;After dealing with issues with my TRRS setup for a few hours I decided to cut 
+&lt;p&gt;After dealing with issues with my TRRS setup for a few hours I decided to cut
 my losses and solder the wires for the two sides together. This is certainly
 not the most reliable or prettiest option but it was an easy option for the time.
 I’m planning to order some more TRRS jacks and another cable in the future so I
@@ -139,19 +204,19 @@ less like a skunkworks project.&lt;/p&gt;
 
 &lt;p&gt;I forgot about this until I went to flash some firmware onto the board; I’d
 recommend taking care of this with the rest of the wiring. I used a momentary
-SPST switch from my old college EE lab kit for each side. One leg gets a connection 
-to &lt;code class=&quot;highlighter-rouge&quot;&gt;GND&lt;/code&gt; and one of the other two legs gets a connection to &lt;code class=&quot;highlighter-rouge&quot;&gt;RST&lt;/code&gt; on the Pro Micro.
-I had to play with the wiring a bit to figure out which of the legs was the normally 
+SPST switch from my old college EE lab kit for each side. One leg gets a connection
+to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GND&lt;/code&gt; and one of the other two legs gets a connection to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RST&lt;/code&gt; on the Pro Micro.
+I had to play with the wiring a bit to figure out which of the legs was the normally
 open connection and which one was normally closed to ensure that the reset only
 occurs when the switch is pressed.&lt;/p&gt;
 
-&lt;p&gt;After wiring it up I used a piece of double sided adhesive foam to attach it 
+&lt;p&gt;After wiring it up I used a piece of double sided adhesive foam to attach it
 to the top plate near the thumb cluster. You can see a bit of it in the header
 photo for this article.&lt;/p&gt;
 
 &lt;h2 id=&quot;qmk-config&quot;&gt;QMK Config&lt;/h2&gt;
 
-&lt;p&gt;I loved the customization possibilities with &lt;a href=&quot;https://docs.qmk.fm/#/&quot;&gt;QMK&lt;/a&gt; on my Hot Dox and it was 
+&lt;p&gt;I loved the customization possibilities with &lt;a href=&quot;https://docs.qmk.fm/#/&quot;&gt;QMK&lt;/a&gt; on my Hot Dox and it was
 the clear choice for my Iris build. The Iris is already supported by QMK but
 the configuration is intended for an Iris that uses a PCB rather than a hand-wired
 clone like mine. I &lt;a href=&quot;https://github.com/baylessj/qmk_firmware&quot;&gt;forked QMK on github&lt;/a&gt;
@@ -159,18 +224,18 @@ and started making my own modified version of the Iris QMK configuration.&lt;/p&
 
 &lt;h3 id=&quot;describing-the-wiring&quot;&gt;Describing the Wiring&lt;/h3&gt;
 
-&lt;p&gt;The first step to getting the Iris up and running was defining the wiring in the 
-QMK config header. I chose the pins that made the most sense for the geometry of 
-my handwired build but that, unsurprisingly, did not match the pins used on the 
+&lt;p&gt;The first step to getting the Iris up and running was defining the wiring in the
+QMK config header. I chose the pins that made the most sense for the geometry of
+my handwired build but that, unsurprisingly, did not match the pins used on the
 PCB version of the Iris.&lt;/p&gt;
 
-&lt;p&gt;One source of confusion for me in this step was the fact that each pin on the 
-Pro Micro has a multitude of names. The identifiers used by QMK are the Arduino 
+&lt;p&gt;One source of confusion for me in this step was the fact that each pin on the
+Pro Micro has a multitude of names. The identifiers used by QMK are the Arduino
 pin names rather than the names shown on the physical board or its wiring diagram.
 These names are copied below. The top of the diagram is where the micro-USB
 connector lies on the board.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; Pro Micro Pinout:
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; Pro Micro Pinout:
 
      D3 +--------+ RAW
      D2 | +----+ | GND
@@ -186,47 +251,47 @@ SCL  D0 |        | F5
      B5 +--------+ B6
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;With this in mind, I copied the files from &lt;code class=&quot;highlighter-rouge&quot;&gt;qmk_firmware/keyboards/keebio/iris/rev4&lt;/code&gt;
-(the latest keyboard revision at the time of writing) to a new folder in the same 
-parent directory that I called “Handwire”. I changed these files to match my keyboard’s 
+&lt;p&gt;With this in mind, I copied the files from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;qmk_firmware/keyboards/keebio/iris/rev4&lt;/code&gt;
+(the latest keyboard revision at the time of writing) to a new folder in the same
+parent directory that I called “Handwire”. I changed these files to match my keyboard’s
 wiring and set this layout as my keyboard type with the QMK CLI.&lt;/p&gt;
 
-&lt;p&gt;The pins for the matrix wiring are defined with the following lines in &lt;code class=&quot;highlighter-rouge&quot;&gt;config.h&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;The pins for the matrix wiring are defined with the following lines in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.h&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#define MATRIX_ROW_PINS        { B1, F7, F6, F5, F4 }
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#define MATRIX_ROW_PINS        { B1, F7, F6, F5, F4 }
 #define MATRIX_COL_PINS        { B3, B2, B6, E6, B4, B5 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The row pins are ordered from the top (furthest from the wrist) down and the 
+&lt;p&gt;The row pins are ordered from the top (furthest from the wrist) down and the
 column pins are ordered from the inside (thumb side) out for the two sides.&lt;/p&gt;
 
 &lt;h3 id=&quot;split-keyboard-things&quot;&gt;Split Keyboard Things&lt;/h3&gt;
 
 &lt;p&gt;Most of the split keyboard-specific QMK configuration details were handled already
-by the Iris files that I reused, but there were two items that I had to define 
-in my &lt;strong&gt;keymap&lt;/strong&gt;. This involved a different &lt;code class=&quot;highlighter-rouge&quot;&gt;config.h&lt;/code&gt; file than the previously
-mentioned wiring config, this file was in a keymap directory that I created rather 
+by the Iris files that I reused, but there were two items that I had to define
+in my &lt;strong&gt;keymap&lt;/strong&gt;. This involved a different &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config.h&lt;/code&gt; file than the previously
+mentioned wiring config, this file was in a keymap directory that I created rather
 than in the “Handwire” layout config.&lt;/p&gt;
 
-&lt;p&gt;I defined the following two macros in &lt;code class=&quot;highlighter-rouge&quot;&gt;keymaps/&amp;lt;MY_USER_NAME&amp;gt;/config.h&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;I defined the following two macros in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;keymaps/&amp;lt;MY_USER_NAME&amp;gt;/config.h&lt;/code&gt;:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;USE_I2C&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;MASTER_RIGHT&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;USE_I2C&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MASTER_RIGHT&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;These macros tell QMK that I am using I2C over four wires to communicate between 
+&lt;p&gt;These macros tell QMK that I am using I2C over four wires to communicate between
 the sides of the keyboard and that I will always plug the keyboard in to my
-computer by way of the micro on the right hand side. There are other configuration 
+computer by way of the micro on the right hand side. There are other configuration
 options available for determining the master side but I found that it was easiest
 to just stick with the right side permanently.&lt;/p&gt;
 
 &lt;h3 id=&quot;keymap&quot;&gt;Keymap&lt;/h3&gt;
 
-&lt;p&gt;I was able to transfer my Hot Dox keyboard layout without a ton of modifications 
+&lt;p&gt;I was able to transfer my Hot Dox keyboard layout without a ton of modifications
 because I was pretty much only using 56 keys on the Hot Dox anyways. The top row
-was where I most noticed the more cramped layout of the Iris but I was able to 
-resolve that issue with the &lt;code class=&quot;highlighter-rouge&quot;&gt;KC_GESC&lt;/code&gt; key macro in QMK. This allows me wrap the 
+was where I most noticed the more cramped layout of the Iris but I was able to
+resolve that issue with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;KC_GESC&lt;/code&gt; key macro in QMK. This allows me wrap the
 grave key and the escape key into one all on the same layer. I then rearranged
 the number row a bit so that it is in order from 0-9 rather than 1-9 followed by 0.
 This kept the numbers, and more importantly, their symbols, in the same position
@@ -247,8 +312,8 @@ that came with the update were well worth the move from 19.10. After a few days
 of using the update I still stand by my opinion that the upgrade was worthwhile,
 but it wasn’t an easy transition.&lt;/p&gt;
 
-&lt;p&gt;For starters, the 20.04 upgrade with &lt;code class=&quot;highlighter-rouge&quot;&gt;pop-upgrade&lt;/code&gt; didn’t like the configuration
-of my computer’s hard-drives in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/fstab&lt;/code&gt; – but that’s understandable given
+&lt;p&gt;For starters, the 20.04 upgrade with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pop-upgrade&lt;/code&gt; didn’t like the configuration
+of my computer’s hard-drives in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/fstab&lt;/code&gt; – but that’s understandable given
 that there’s three drives and a mix on windows partitions on the non-boot ones.
 A fresh install took care of that issue, and all of the drives are accessible
 and running fine now. I did not, however, expect that my &lt;a href=&quot;&quot;&gt;Logitech MX MAster 2S&lt;/a&gt;
@@ -261,13 +326,13 @@ would have been fine, except the update encountered an “unexpected error” an
 out half-way through the update. This left the mouse dongle unusable and the 
 mouse refused to connect to it.&lt;/p&gt;
 
-&lt;p&gt;A quick check of &lt;code class=&quot;highlighter-rouge&quot;&gt;lsusb | grep Logitech&lt;/code&gt; gave me &lt;code class=&quot;highlighter-rouge&quot;&gt;Bus 003 Device 005: ID 046d:aaac Logitech, Inc. USB BootLoader&lt;/code&gt; where the dongle was plugged in. This was good news in that the dongle
+&lt;p&gt;A quick check of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lsusb | grep Logitech&lt;/code&gt; gave me &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bus 003 Device 005: ID 046d:aaac Logitech, Inc. USB BootLoader&lt;/code&gt; where the dongle was plugged in. This was good news in that the dongle
 was still communicating over USB and was not hard-bricked, but it clearly isn’t 
 supposed to be a “BootLoader” device. The Pop!_OS firmware upgrade utility in 
 the Settings menu didn’t show that the device was eligible for an upgrade, but I
 assumed that somehow forcing an update would improve the situation. Thankfully I
 was introduced to the command line version of the update tool from a Stack Overflow
-post. Running &lt;code class=&quot;highlighter-rouge&quot;&gt;fwupdmgr update&lt;/code&gt; turned out to be the solution, it correctly
+post. Running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fwupdmgr update&lt;/code&gt; turned out to be the solution, it correctly
 identified that the “USB BootLoader” device was supposed to be a Logitech Receiver
 and got it updated. It took a minute to run the upgrade and once it finished I was
 able to connect the mouse to the receiver again.&lt;/p&gt;
@@ -321,7 +386,7 @@ meetings would get a high-level ID like #1a and a detailed note about timeboxing
 Scrum standups would be nested below it as #1a1a1a. Each alternation between
 alphabetical and numerical characters indicates a level of abstraction.&lt;/p&gt;
 
-&lt;p&gt;I initially wrote my Zettelkasten in a plain &lt;code class=&quot;highlighter-rouge&quot;&gt;.txt&lt;/code&gt; file using a rough markdown
+&lt;p&gt;I initially wrote my Zettelkasten in a plain &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.txt&lt;/code&gt; file using a rough markdown
 syntax. This was manageable until my Zettelkasten file grew to about 1000 lines,
 and then it became a bit of a pain to navigate between linked notes. At this point
 I turned to &lt;a href=&quot;https://vimwiki.github.io/&quot;&gt;Vimwiki&lt;/a&gt; to get the linking infrastructure for my Zettelkasten.
@@ -329,9 +394,9 @@ Vimwiki does a lot beyond the linking support that I am using it for, but I will
 focus primarily on that subset of features here.&lt;/p&gt;
 
 &lt;p&gt;Each note in my Zettelkasten receives a unique ID of the form “1a1a1” and is listed
-as a second level header in the &lt;code class=&quot;highlighter-rouge&quot;&gt;zettelkasten.wiki&lt;/code&gt; file. It is then easy
+as a second level header in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zettelkasten.wiki&lt;/code&gt; file. It is then easy
 to link to any other note in the Zettelkasten by adding a Vimwiki link to the note’s
-anchor, i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;[[#1a1a1|Link to other note]]&lt;/code&gt;. Pressing enter when the cursor is
+anchor, i.e. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[[#1a1a1|Link to other note]]&lt;/code&gt;. Pressing enter when the cursor is
 over the link in normal mode will jump to that note. The structure of the
 Zettelkasten IDs make it easy to find a note’s ID when putting in a link – searching
 for a general term associated with the desired note will lead to its parent note.&lt;/p&gt;
@@ -390,8 +455,8 @@ but it’s at least still a *nix based system.&lt;/p&gt;
 
 &lt;p&gt;I was glad to see that, as of Catalina, MacOS uses &lt;a href=&quot;https://www.zsh.org/&quot;&gt;Zsh&lt;/a&gt; as its default shell.
 I use Zsh as my default shell on my linux machine so I was excited to simply
-drop in my &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; file from the linux machine. For the most part that worked,
-after installing &lt;a href=&quot;https://ohmyz.sh/&quot;&gt;Oh-My-Zsh&lt;/a&gt; and the other usual things, but running &lt;code class=&quot;highlighter-rouge&quot;&gt;flutter&lt;/code&gt;
+drop in my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; file from the linux machine. For the most part that worked,
+after installing &lt;a href=&quot;https://ohmyz.sh/&quot;&gt;Oh-My-Zsh&lt;/a&gt; and the other usual things, but running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flutter&lt;/code&gt;
 did not.&lt;/p&gt;
 
 &lt;p&gt;This was a bit of an issue since the MacBook’s main purpose in life was to be a
@@ -399,13 +464,13 @@ flutter dev machine. I spent about half an hour verifying that I had all of the
 proper executables installed for Flutter and that they had the right permissions,
 only to realize that the issue was very simple but not immediately obvious.&lt;/p&gt;
 
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt; symbol does not expand to &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/{USER_NAME}/&lt;/code&gt; in a &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; file on MacOS
-like it does in Pop! OS. I had been using the &lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt; symbol to point to the location
-of the flutter binaries on my &lt;code class=&quot;highlighter-rouge&quot;&gt;PATH&lt;/code&gt;, which worked on my linux machine but not
-on the MacBook. I changed these symbols to the full &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/{USER_NAME}/&lt;/code&gt; string
-in my &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; and everything worked fine and dandy for Flutter.&lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~&lt;/code&gt; symbol does not expand to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/home/{USER_NAME}/&lt;/code&gt; in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; file on MacOS
+like it does in Pop! OS. I had been using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~&lt;/code&gt; symbol to point to the location
+of the flutter binaries on my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PATH&lt;/code&gt;, which worked on my linux machine but not
+on the MacBook. I changed these symbols to the full &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/home/{USER_NAME}/&lt;/code&gt; string
+in my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; and everything worked fine and dandy for Flutter.&lt;/p&gt;
 
-&lt;p&gt;Don’t be like me, use full paths in your Mac’s &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;Don’t be like me, use full paths in your Mac’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; file.&lt;/p&gt;
 </content>
  </entry>
  
@@ -437,7 +502,7 @@ in my &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; and ev
 
 &lt;h3 id=&quot;qmk&quot;&gt;QMK&lt;/h3&gt;
 
-&lt;p&gt;The &lt;em&gt;QMK Firmware&lt;/em&gt; is without a doubt my favorite part of using this keyboard. This firmware allows you to change the behavior of every key on the keyboard to fit your preferences. The modifications to the key behavior is not restricted simply to the standard set of keys that can be accessed without holding any modifier keys, instead you can add up to 32 &lt;strong&gt;layers&lt;/strong&gt; of different functionality. A layer is similar to the change from lowercase to uppercase that occurs when holding the shift key. I have one layer that allows me to use the arrow keys on the &lt;code class=&quot;highlighter-rouge&quot;&gt;i, j, k, l&lt;/code&gt; keys so I don’t have to move from home row, another layer that allows me to move the mouse with the same set of keys, and another layer that gives me a numpad around home row position. These layers give me all of the benefits of a full-size keyboard (plus some, in the case of the mouse keys) without ever having to leave home row.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;QMK Firmware&lt;/em&gt; is without a doubt my favorite part of using this keyboard. This firmware allows you to change the behavior of every key on the keyboard to fit your preferences. The modifications to the key behavior is not restricted simply to the standard set of keys that can be accessed without holding any modifier keys, instead you can add up to 32 &lt;strong&gt;layers&lt;/strong&gt; of different functionality. A layer is similar to the change from lowercase to uppercase that occurs when holding the shift key. I have one layer that allows me to use the arrow keys on the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;i, j, k, l&lt;/code&gt; keys so I don’t have to move from home row, another layer that allows me to move the mouse with the same set of keys, and another layer that gives me a numpad around home row position. These layers give me all of the benefits of a full-size keyboard (plus some, in the case of the mouse keys) without ever having to leave home row.&lt;/p&gt;
 
 &lt;p&gt;You can find my QMK configuration file on my &lt;a href=&quot;https://github.com/baylessj/hotdox-qmk&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
 
@@ -460,15 +525,15 @@ in my &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; and ev
    <link href="http://localhost:4000/2019/08/07/flutter-firebase-gradle.html"/>
    <updated>2019-08-07T00:00:00-04:00</updated>
    <id>http://localhost:4000/2019/08/07/flutter-firebase-gradle</id>
-   <content type="html">&lt;p&gt;I recently got started developing a cross-platform app in &lt;a href=&quot;https://flutter.dev/&quot;&gt;Flutter&lt;/a&gt;, a framework developed by Google that uses the &lt;a href=&quot;https://dart.dev/&quot;&gt;Dart&lt;/a&gt; programming language. One major benefit of the fact that Flutter is created by Google is the &lt;em&gt;mostly&lt;/em&gt; easy integration with Google’s other services. I have come across one minor exception to this rule in my attempt to integrate &lt;a href=&quot;https://firebase.google.com/&quot;&gt;Firebase&lt;/a&gt; with my Flutter project, an error regarding &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file generation.&lt;/p&gt;
+   <content type="html">&lt;p&gt;I recently got started developing a cross-platform app in &lt;a href=&quot;https://flutter.dev/&quot;&gt;Flutter&lt;/a&gt;, a framework developed by Google that uses the &lt;a href=&quot;https://dart.dev/&quot;&gt;Dart&lt;/a&gt; programming language. One major benefit of the fact that Flutter is created by Google is the &lt;em&gt;mostly&lt;/em&gt; easy integration with Google’s other services. I have come across one minor exception to this rule in my attempt to integrate &lt;a href=&quot;https://firebase.google.com/&quot;&gt;Firebase&lt;/a&gt; with my Flutter project, an error regarding &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file generation.&lt;/p&gt;
 
 &lt;h3 id=&quot;original-gradle-modifications&quot;&gt;Original Gradle Modifications&lt;/h3&gt;
 
 &lt;p&gt;I followed along with Google’s guide on modifying my app’s &lt;a href=&quot;https://gradle.org/&quot;&gt;Gradle&lt;/a&gt; configuration files to integrate Firebase services into the app. My Gradle config files after implementing the Google guide’s changes were as follows:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;./android/&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./android/&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;buildscript {
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;buildscript {
     repositories {
         google()
         jcenter()
@@ -500,9 +565,9 @@ task clean(type: Delete) {
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;./android/app/&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./android/app/&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def localProperties = new Properties()
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
     localPropertiesFile.withReader('UTF-8') { reader -&amp;gt;
@@ -568,13 +633,13 @@ apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle p
 
 &lt;h3 id=&quot;too-many-methods-for-one-dex-file&quot;&gt;Too many methods for one Dex file&lt;/h3&gt;
 
-&lt;p&gt;After I was done following the Google guide I was met with a build error that was not addressed in the Google guide. The addition of the &lt;code class=&quot;highlighter-rouge&quot;&gt;google-services&lt;/code&gt; package inflated the size of the built project to the point that it exceeded the number of methods allowed in a single &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;After I was done following the Google guide I was met with a build error that was not addressed in the Google guide. The addition of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;google-services&lt;/code&gt; package inflated the size of the built project to the point that it exceeded the number of methods allowed in a single &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file.&lt;/p&gt;
 
-&lt;p&gt;A &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file is similar to a &lt;code class=&quot;highlighter-rouge&quot;&gt;.jar&lt;/code&gt; file from typical Java development but is unique to the Android ecosystem. The &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file is used as an intermediary file in developing a &lt;code class=&quot;highlighter-rouge&quot;&gt;.apk&lt;/code&gt; file that will be loaded onto the Android device. I discovered through this error message that the default Gradle configuration generated with Flutter only uses one &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file to generate the &lt;code class=&quot;highlighter-rouge&quot;&gt;.apk&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;A &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file is similar to a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.jar&lt;/code&gt; file from typical Java development but is unique to the Android ecosystem. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file is used as an intermediary file in developing a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.apk&lt;/code&gt; file that will be loaded onto the Android device. I discovered through this error message that the default Gradle configuration generated with Flutter only uses one &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file to generate the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.apk&lt;/code&gt; file.&lt;/p&gt;
 
-&lt;p&gt;The solution I found to this error consisted of two changes: enabling a build flag regarding the &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; generation and enabling resource shrinking. The default configuration that only allows for one &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file can be changed by setting the &lt;code class=&quot;highlighter-rouge&quot;&gt;multiDexEnabled&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; in the &lt;code class=&quot;highlighter-rouge&quot;&gt;defaultConfig&lt;/code&gt; section of the &lt;code class=&quot;highlighter-rouge&quot;&gt;android&lt;/code&gt; rules.&lt;/p&gt;
+&lt;p&gt;The solution I found to this error consisted of two changes: enabling a build flag regarding the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.dex&lt;/code&gt; generation and enabling resource shrinking. The default configuration that only allows for one &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.dex&lt;/code&gt; file can be changed by setting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;multiDexEnabled&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;true&lt;/code&gt; in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;defaultConfig&lt;/code&gt; section of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;android&lt;/code&gt; rules.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;defaultConfig {
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;defaultConfig {
     applicationId &quot;com.jonathanbayless.autodo&quot;
 
     multiDexEnabled true
@@ -585,9 +650,9 @@ apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle p
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The first change alone will solve the build errors, but I was frustrated with the massive increase in size of my application when I was only using a small portion of the Firebase feature set. There are two additional flags available to reduce the size of the &lt;code class=&quot;highlighter-rouge&quot;&gt;.dex&lt;/code&gt; files and resulting &lt;code class=&quot;highlighter-rouge&quot;&gt;.apk&lt;/code&gt; file. The &lt;code class=&quot;highlighter-rouge&quot;&gt;shrinkResources&lt;/code&gt; flag removes unnecessary code that comes by default with the &lt;code class=&quot;highlighter-rouge&quot;&gt;google-services&lt;/code&gt; package and the &lt;code class=&quot;highlighter-rouge&quot;&gt;minifyEnabled&lt;/code&gt; just removes any dead code.&lt;/p&gt;
+&lt;p&gt;The first change alone will solve the build errors, but I was frustrated with the massive increase in size of my application when I was only using a small portion of the Firebase feature set. There are two additional flags available to reduce the size of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.dex&lt;/code&gt; files and resulting &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.apk&lt;/code&gt; file. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;shrinkResources&lt;/code&gt; flag removes unnecessary code that comes by default with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;google-services&lt;/code&gt; package and the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;minifyEnabled&lt;/code&gt; just removes any dead code.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;buildTypes {
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;buildTypes {
     release {
         // TODO: Add your own signing config for the release build.
         // Signing with the debug keys for now, so `flutter run --release` works.
@@ -604,9 +669,9 @@ apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle p
 
 &lt;h4 id=&quot;resulting-gradle-file&quot;&gt;Resulting Gradle File&lt;/h4&gt;
 
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;./android/&lt;/code&gt; Gradle config file was not changed at all, it was the same as in the original example. Here is the modified &lt;code class=&quot;highlighter-rouge&quot;&gt;./android/app/&lt;/code&gt; Gradle file:&lt;/p&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./android/&lt;/code&gt; Gradle config file was not changed at all, it was the same as in the original example. Here is the modified &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./android/app/&lt;/code&gt; Gradle file:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def localProperties = new Properties()
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
     localPropertiesFile.withReader('UTF-8') { reader -&amp;gt;

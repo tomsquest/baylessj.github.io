@@ -1,30 +1,62 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jonathan Bayless - Vimwiki + Zettelkasten -- Note Taking Nirvana</title>
-  <meta name="author" content="Jonathan Bayless" />
-  <meta name="description" content="The blog of Jonathan Bayless" />
-  <link rel="canonical" href="http://localhost:4000/2020/03/09/zettelkasten-vimwiki.html" />
+<!--[if lt IE 7]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jonathan Bayless - Vimwiki + Zettelkasten -- Note Taking Nirvana</title>
+    <meta name="author" content="Jonathan Bayless" />
+    <meta name="description" content="The blog of Jonathan Bayless" />
+    <link
+      rel="canonical"
+      href="http://localhost:4000/2020/03/09/zettelkasten-vimwiki.html"
+    />
 
-  <link href="//fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="/favicon.png">
-  <link rel="alternate" type="application/atom+xml" title="Jonathan Bayless" href="http://localhost:4000/atom.xml" />
+    <link
+      href="//fonts.googleapis.com/css?family=Open+Sans:600,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Jonathan Bayless"
+      href="http://localhost:4000/atom.xml"
+    />
 
-  <link rel="stylesheet" href="/assets/css/all.css">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-</head>
-<body>
-  <div class="container">
-    <div class="four columns sidebar">
-      <nav>
+    <link
+      rel="stylesheet"
+      href="http://localhost:4000/assets/css/all.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="http://localhost:4000/css/styles.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="four columns sidebar"><nav>
   <h1> </h1>
   <a href="/">
        
@@ -89,12 +121,11 @@
 
   </div>
 </nav>
+</div>
 
-    </div>
-
-    <div class="eleven columns content">
-      <p class="meta">
-  March 09, 2020 
+      <div class="eleven columns content">
+        <p class="meta">
+  March 09, 2020
   <a href="/">
     <i class="home fa fa-home"></i>
   </a>
@@ -102,8 +133,7 @@
 
 <h1 class="title">Vimwiki + Zettelkasten -- Note Taking Nirvana</h1>
 
-<div id="post">
-  <p>I’ve been in a time of turmoil with note taking and text editing. I bounced around
+<div id="post"><p>I’ve been in a time of turmoil with note taking and text editing. I bounced around
 between a few different editors before landing on Vim full-time. I experimented
 with a <a href="https://gitbook.com">gitbook</a>, I used <a href="https://joplinapp.org">Joplin</a> for a bit, and I wrote a lot down on paper
 and post-it notes. As much as I love using pen and paper, I need to take notes
@@ -142,7 +172,7 @@ meetings would get a high-level ID like #1a and a detailed note about timeboxing
 Scrum standups would be nested below it as #1a1a1a. Each alternation between
 alphabetical and numerical characters indicates a level of abstraction.</p>
 
-<p>I initially wrote my Zettelkasten in a plain <code class="highlighter-rouge">.txt</code> file using a rough markdown
+<p>I initially wrote my Zettelkasten in a plain <code class="language-plaintext highlighter-rouge">.txt</code> file using a rough markdown
 syntax. This was manageable until my Zettelkasten file grew to about 1000 lines,
 and then it became a bit of a pain to navigate between linked notes. At this point
 I turned to <a href="https://vimwiki.github.io/">Vimwiki</a> to get the linking infrastructure for my Zettelkasten.
@@ -150,9 +180,9 @@ Vimwiki does a lot beyond the linking support that I am using it for, but I will
 focus primarily on that subset of features here.</p>
 
 <p>Each note in my Zettelkasten receives a unique ID of the form “1a1a1” and is listed
-as a second level header in the <code class="highlighter-rouge">zettelkasten.wiki</code> file. It is then easy
+as a second level header in the <code class="language-plaintext highlighter-rouge">zettelkasten.wiki</code> file. It is then easy
 to link to any other note in the Zettelkasten by adding a Vimwiki link to the note’s
-anchor, i.e. <code class="highlighter-rouge">[[#1a1a1|Link to other note]]</code>. Pressing enter when the cursor is
+anchor, i.e. <code class="language-plaintext highlighter-rouge">[[#1a1a1|Link to other note]]</code>. Pressing enter when the cursor is
 over the link in normal mode will jump to that note. The structure of the
 Zettelkasten IDs make it easy to find a note’s ID when putting in a link – searching
 for a general term associated with the desired note will lead to its parent note.</p>
@@ -164,31 +194,34 @@ backed up in multiple places, so I don’t need to worry about vendor lock-in an
 losing my notes. Using Zettelkasten with Vimwiki is just enough structure and tech
 to make notetaking enjoyable, but not so much that it builds a fragile, short-lived
 tech stack.</p>
-
 </div>
+
+
 
 <div id="related">
   <h3>Related Posts</h3>
   <ul class="posts">
     
     <li>
-      <span>09 Jun 2020 &raquo;</span> <a href="/2020/06/09/iris-handwire.html">Handwired Iris Keyboard Build</a>
+      <span>19 Aug 2020 &raquo;</span>
+      <a href="/2020/08/19/design-everyday-things.html">Book Review -- The Design of Everyday Things</a>
     </li>
     
     <li>
-      <span>03 May 2020 &raquo;</span> <a href="/2020/05/03/bricked-mx-master-receiver.html">Fixing a soft-bricked Logitech Receiver with fwupdmgr</a>
+      <span>07 Aug 2020 &raquo;</span>
+      <a href="/2020/08/07/zettelkasten-foam.html">Zettelkasten Tooling Updates</a>
     </li>
     
     <li>
-      <span>28 Feb 2020 &raquo;</span> <a href="/blog/2020/02/28/code-ahead.html">Code Ahead - A Painful Read That Makes Some Valid Points</a>
+      <span>09 Jun 2020 &raquo;</span>
+      <a href="/2020/06/09/iris-handwire.html">Handwired Iris Keyboard Build</a>
     </li>
     
   </ul>
 </div>
 
 
-      <div class="footer">
-        <div class="disclaimer">
+        <div class="footer"><div class="disclaimer">
   
   <p>
     The postings on this site are my own and don't necessarily represent my 
@@ -199,12 +232,11 @@ tech stack.</p>
   <p>
     © Jonathan Bayless, 2020 &mdash; built with <a href="http://jekyllrb.com/">Jekyll</a> using <a href="https://github.com/swanson/lagom">Lagom theme</a>
   </p>
-</div>
+</div></div>
       </div>
     </div>
-  </div>
 
-
+    
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -219,5 +251,5 @@ tech stack.</p>
 
 </script>
 
-</body>
+  </body>
 </html>

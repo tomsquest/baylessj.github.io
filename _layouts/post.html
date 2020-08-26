@@ -3,7 +3,7 @@ layout: default
 ---
 
 <p class="meta">
-  {{ page.date | date: "%B %d, %Y" }} 
+  {{ page.date | date: "%B %d, %Y" }}
   <a href="/">
     <i class="home fa fa-home"></i>
   </a>
@@ -11,16 +11,23 @@ layout: default
 
 <h1 class="title">{{ page.title }}</h1>
 
-<div id="post">
-  {{ content }}
+<div id="post">{{ content }}</div>
+
+{% if page.num_comments %}
+<div>
+  <h3>Discussion</h3>
+  See <strong>{{ page.num_comments }}</strong> comments discussing this post on
+  <a href="{{ page.link }}">Hacker News</a>.
 </div>
+{% endif %}
 
 <div id="related">
   <h3>Related Posts</h3>
   <ul class="posts">
     {% for post in site.related_posts limit:3 %}
     <li>
-      <span>{{ post.date | date_to_string }} &raquo;</span> <a href="{{ post.url }}">{{ post.title }}</a>
+      <span>{{ post.date | date_to_string }} &raquo;</span>
+      <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
     {% endfor %}
   </ul>

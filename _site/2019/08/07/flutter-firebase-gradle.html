@@ -1,30 +1,62 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jonathan Bayless - Gradle Configuration for Firebase Usage in Flutter</title>
-  <meta name="author" content="Jonathan Bayless" />
-  <meta name="description" content="The blog of Jonathan Bayless" />
-  <link rel="canonical" href="http://localhost:4000/2019/08/07/flutter-firebase-gradle.html" />
+<!--[if lt IE 7]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jonathan Bayless - Gradle Configuration for Firebase Usage in Flutter</title>
+    <meta name="author" content="Jonathan Bayless" />
+    <meta name="description" content="The blog of Jonathan Bayless" />
+    <link
+      rel="canonical"
+      href="http://localhost:4000/2019/08/07/flutter-firebase-gradle.html"
+    />
 
-  <link href="//fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="/favicon.png">
-  <link rel="alternate" type="application/atom+xml" title="Jonathan Bayless" href="http://localhost:4000/atom.xml" />
+    <link
+      href="//fonts.googleapis.com/css?family=Open+Sans:600,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Jonathan Bayless"
+      href="http://localhost:4000/atom.xml"
+    />
 
-  <link rel="stylesheet" href="/assets/css/all.css">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-</head>
-<body>
-  <div class="container">
-    <div class="four columns sidebar">
-      <nav>
+    <link
+      rel="stylesheet"
+      href="http://localhost:4000/assets/css/all.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="http://localhost:4000/css/styles.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="four columns sidebar"><nav>
   <h1> </h1>
   <a href="/">
        
@@ -89,12 +121,11 @@
 
   </div>
 </nav>
+</div>
 
-    </div>
-
-    <div class="eleven columns content">
-      <p class="meta">
-  August 07, 2019 
+      <div class="eleven columns content">
+        <p class="meta">
+  August 07, 2019
   <a href="/">
     <i class="home fa fa-home"></i>
   </a>
@@ -102,16 +133,15 @@
 
 <h1 class="title">Gradle Configuration for Firebase Usage in Flutter</h1>
 
-<div id="post">
-  <p>I recently got started developing a cross-platform app in <a href="https://flutter.dev/">Flutter</a>, a framework developed by Google that uses the <a href="https://dart.dev/">Dart</a> programming language. One major benefit of the fact that Flutter is created by Google is the <em>mostly</em> easy integration with Google’s other services. I have come across one minor exception to this rule in my attempt to integrate <a href="https://firebase.google.com/">Firebase</a> with my Flutter project, an error regarding <code class="highlighter-rouge">.dex</code> file generation.</p>
+<div id="post"><p>I recently got started developing a cross-platform app in <a href="https://flutter.dev/">Flutter</a>, a framework developed by Google that uses the <a href="https://dart.dev/">Dart</a> programming language. One major benefit of the fact that Flutter is created by Google is the <em>mostly</em> easy integration with Google’s other services. I have come across one minor exception to this rule in my attempt to integrate <a href="https://firebase.google.com/">Firebase</a> with my Flutter project, an error regarding <code class="language-plaintext highlighter-rouge">.dex</code> file generation.</p>
 
 <h3 id="original-gradle-modifications">Original Gradle Modifications</h3>
 
 <p>I followed along with Google’s guide on modifying my app’s <a href="https://gradle.org/">Gradle</a> configuration files to integrate Firebase services into the app. My Gradle config files after implementing the Google guide’s changes were as follows:</p>
 
-<p><code class="highlighter-rouge">./android/</code>:</p>
+<p><code class="language-plaintext highlighter-rouge">./android/</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>buildscript {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>buildscript {
     repositories {
         google()
         jcenter()
@@ -143,9 +173,9 @@ task clean(type: Delete) {
 }
 </code></pre></div></div>
 
-<p><code class="highlighter-rouge">./android/app/</code>:</p>
+<p><code class="language-plaintext highlighter-rouge">./android/app/</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def localProperties = new Properties()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
     localPropertiesFile.withReader('UTF-8') { reader -&gt;
@@ -211,13 +241,13 @@ apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle p
 
 <h3 id="too-many-methods-for-one-dex-file">Too many methods for one Dex file</h3>
 
-<p>After I was done following the Google guide I was met with a build error that was not addressed in the Google guide. The addition of the <code class="highlighter-rouge">google-services</code> package inflated the size of the built project to the point that it exceeded the number of methods allowed in a single <code class="highlighter-rouge">.dex</code> file.</p>
+<p>After I was done following the Google guide I was met with a build error that was not addressed in the Google guide. The addition of the <code class="language-plaintext highlighter-rouge">google-services</code> package inflated the size of the built project to the point that it exceeded the number of methods allowed in a single <code class="language-plaintext highlighter-rouge">.dex</code> file.</p>
 
-<p>A <code class="highlighter-rouge">.dex</code> file is similar to a <code class="highlighter-rouge">.jar</code> file from typical Java development but is unique to the Android ecosystem. The <code class="highlighter-rouge">.dex</code> file is used as an intermediary file in developing a <code class="highlighter-rouge">.apk</code> file that will be loaded onto the Android device. I discovered through this error message that the default Gradle configuration generated with Flutter only uses one <code class="highlighter-rouge">.dex</code> file to generate the <code class="highlighter-rouge">.apk</code> file.</p>
+<p>A <code class="language-plaintext highlighter-rouge">.dex</code> file is similar to a <code class="language-plaintext highlighter-rouge">.jar</code> file from typical Java development but is unique to the Android ecosystem. The <code class="language-plaintext highlighter-rouge">.dex</code> file is used as an intermediary file in developing a <code class="language-plaintext highlighter-rouge">.apk</code> file that will be loaded onto the Android device. I discovered through this error message that the default Gradle configuration generated with Flutter only uses one <code class="language-plaintext highlighter-rouge">.dex</code> file to generate the <code class="language-plaintext highlighter-rouge">.apk</code> file.</p>
 
-<p>The solution I found to this error consisted of two changes: enabling a build flag regarding the <code class="highlighter-rouge">.dex</code> generation and enabling resource shrinking. The default configuration that only allows for one <code class="highlighter-rouge">.dex</code> file can be changed by setting the <code class="highlighter-rouge">multiDexEnabled</code> to <code class="highlighter-rouge">true</code> in the <code class="highlighter-rouge">defaultConfig</code> section of the <code class="highlighter-rouge">android</code> rules.</p>
+<p>The solution I found to this error consisted of two changes: enabling a build flag regarding the <code class="language-plaintext highlighter-rouge">.dex</code> generation and enabling resource shrinking. The default configuration that only allows for one <code class="language-plaintext highlighter-rouge">.dex</code> file can be changed by setting the <code class="language-plaintext highlighter-rouge">multiDexEnabled</code> to <code class="language-plaintext highlighter-rouge">true</code> in the <code class="language-plaintext highlighter-rouge">defaultConfig</code> section of the <code class="language-plaintext highlighter-rouge">android</code> rules.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>defaultConfig {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>defaultConfig {
     applicationId "com.jonathanbayless.autodo"
 
     multiDexEnabled true
@@ -228,9 +258,9 @@ apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle p
 }
 </code></pre></div></div>
 
-<p>The first change alone will solve the build errors, but I was frustrated with the massive increase in size of my application when I was only using a small portion of the Firebase feature set. There are two additional flags available to reduce the size of the <code class="highlighter-rouge">.dex</code> files and resulting <code class="highlighter-rouge">.apk</code> file. The <code class="highlighter-rouge">shrinkResources</code> flag removes unnecessary code that comes by default with the <code class="highlighter-rouge">google-services</code> package and the <code class="highlighter-rouge">minifyEnabled</code> just removes any dead code.</p>
+<p>The first change alone will solve the build errors, but I was frustrated with the massive increase in size of my application when I was only using a small portion of the Firebase feature set. There are two additional flags available to reduce the size of the <code class="language-plaintext highlighter-rouge">.dex</code> files and resulting <code class="language-plaintext highlighter-rouge">.apk</code> file. The <code class="language-plaintext highlighter-rouge">shrinkResources</code> flag removes unnecessary code that comes by default with the <code class="language-plaintext highlighter-rouge">google-services</code> package and the <code class="language-plaintext highlighter-rouge">minifyEnabled</code> just removes any dead code.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>buildTypes {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>buildTypes {
     release {
         // TODO: Add your own signing config for the release build.
         // Signing with the debug keys for now, so `flutter run --release` works.
@@ -247,9 +277,9 @@ apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle p
 
 <h4 id="resulting-gradle-file">Resulting Gradle File</h4>
 
-<p>The <code class="highlighter-rouge">./android/</code> Gradle config file was not changed at all, it was the same as in the original example. Here is the modified <code class="highlighter-rouge">./android/app/</code> Gradle file:</p>
+<p>The <code class="language-plaintext highlighter-rouge">./android/</code> Gradle config file was not changed at all, it was the same as in the original example. Here is the modified <code class="language-plaintext highlighter-rouge">./android/app/</code> Gradle file:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def localProperties = new Properties()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
     localPropertiesFile.withReader('UTF-8') { reader -&gt;
@@ -315,31 +345,34 @@ dependencies {
 
 apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle plugin
 </code></pre></div></div>
-
 </div>
+
+
 
 <div id="related">
   <h3>Related Posts</h3>
   <ul class="posts">
     
     <li>
-      <span>09 Jun 2020 &raquo;</span> <a href="/2020/06/09/iris-handwire.html">Handwired Iris Keyboard Build</a>
+      <span>19 Aug 2020 &raquo;</span>
+      <a href="/2020/08/19/design-everyday-things.html">Book Review -- The Design of Everyday Things</a>
     </li>
     
     <li>
-      <span>03 May 2020 &raquo;</span> <a href="/2020/05/03/bricked-mx-master-receiver.html">Fixing a soft-bricked Logitech Receiver with fwupdmgr</a>
+      <span>07 Aug 2020 &raquo;</span>
+      <a href="/2020/08/07/zettelkasten-foam.html">Zettelkasten Tooling Updates</a>
     </li>
     
     <li>
-      <span>09 Mar 2020 &raquo;</span> <a href="/2020/03/09/zettelkasten-vimwiki.html">Vimwiki + Zettelkasten -- Note Taking Nirvana</a>
+      <span>09 Jun 2020 &raquo;</span>
+      <a href="/2020/06/09/iris-handwire.html">Handwired Iris Keyboard Build</a>
     </li>
     
   </ul>
 </div>
 
 
-      <div class="footer">
-        <div class="disclaimer">
+        <div class="footer"><div class="disclaimer">
   
   <p>
     The postings on this site are my own and don't necessarily represent my 
@@ -350,12 +383,11 @@ apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle p
   <p>
     © Jonathan Bayless, 2020 &mdash; built with <a href="http://jekyllrb.com/">Jekyll</a> using <a href="https://github.com/swanson/lagom">Lagom theme</a>
   </p>
-</div>
+</div></div>
       </div>
     </div>
-  </div>
 
-
+    
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -370,5 +402,5 @@ apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle p
 
 </script>
 
-</body>
+  </body>
 </html>

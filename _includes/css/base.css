@@ -268,8 +268,7 @@
 	  height: 0; }
 	ul.tabs:after {
 	  clear: both; }
-	ul.tabs {
-	  zoom: 1; }
+	ul.tabs {}
 
 
 /* #Forms
