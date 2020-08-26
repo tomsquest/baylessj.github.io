@@ -121,7 +121,7 @@ GEM
     jekyll-github-metadata (2.13.0)
       jekyll (>= 3.4, < 5.0)
       octokit (~> 4.0, != 4.4.0)
-    jekyll-hn-comments (0.0.1)
+    jekyll-hn-comments (0.0.2)
       jekyll
     jekyll-mentions (1.5.1)
       html-pipeline (~> 2.3)
@@ -255,7 +255,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll-hn-comments (~> 0.0.1)
+  jekyll-hn-comments
 
 BUNDLED WITH
    2.1.4
