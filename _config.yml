@@ -2,7 +2,7 @@
 highlighter: rouge
 url: https://jonathanbayless.com
 lsi: false
-exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
+exclude: [vendor, LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
 sass:
   sass_dir: _includes/_sass
 
