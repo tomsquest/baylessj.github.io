@@ -1,5 +1,8 @@
 name: deployment with fancy gems
 
+on:
+  push
+
 jobs:
   jekyll:
     runs-on: ubuntu-18.04
