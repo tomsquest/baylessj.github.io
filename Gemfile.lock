@@ -255,7 +255,9 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll
   jekyll-hn-comments
+  kramdown-parser-gfm
 
 BUNDLED WITH
    2.1.4
