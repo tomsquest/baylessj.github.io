@@ -1,5 +1,7 @@
 ---
 layout: post
+tags: [productivity, keyboards]
+categories: []
 title: Zettelkasten Tooling Updates
 ---
 
