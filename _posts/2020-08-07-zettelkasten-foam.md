@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Zettelkasten Tooling Updates
 ---
 
