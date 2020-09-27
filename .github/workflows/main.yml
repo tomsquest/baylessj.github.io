@@ -19,4 +19,5 @@ jobs:
           JEKYLL_PAT: ${{ secrets.PAT }}
         with:
           target_branch: deploy
+          custom_domain: jonathanbayless.com 
           
