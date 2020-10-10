@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GBoards Gergoplex Keyboard Review
-tags: keyboard
+tags: [keyboards, productivity]
 ---
 
 I recently came across the GBoards line of low-profile keyboards and immediately wanted to try out this thinner design. I still stand by my previous positive review of the [Alpaca Keyboards HotDox]() that I was using as my daily driver, but the GBoards designs addressed a couple of my pain points with it:
@@ -33,3 +33,7 @@ I'm thinking it might be worth taking a look at changing some of the configurati
 I have used an additional QMK macro to make up for the Gergoplex's lack of modifier keys, the aptly named mod-toggle macro. This macro is very similar to the layer-toggle key but instead activates a modifier key like control or alt. These macro keys suffer from the same timing and release order issues that the layer-toggle keys do but are similarly getting more manageable as my typing speed increases. 
 
 One macro, of sorts, that is unique to the GBoards lineup of keyboards and their firmware is the key combo. The GBoards keyboards are either small, like the Gergoplex, or even smaller. It's possible for the Gergoplex to be perfectly usable by just using layers and toggle keys, but it's smaller cousings like the [Georgi]() and [Ginny]() require something closer to [stenography](). This is where key combos come in. The combos also give keys multiple outputs like the toggle keys but are dependent on multiple keys being tapped at the same time. This allows, for example, "o" and "p" to work normally when pressed independently but output a "backspace" command when the two are tapped at the same time. I have only incorporated this technique into my keymap to replace the backspace key but I think I might try to start moving other characters from layers to combos like this in the future. I've found the key combos to be a bit more difficult to get used to conceptually compared to the toggle keys but I haven't found hardly any issues with timing on the key combos.
+
+## Overall Impression
+
+I am confident that the Gergoplex will be a more ergonomic keyboard for me in the long term and a joy to use. It has been difficult to get adjusted to using its innovative layout and I'm still fiddling with my QMK keymap, but the basis of the design is great. It is clear that this keyboard was designed after a long time of using similar split, ergonomic keyboards as it builds upon the highlights of other similar designs while addressing their flaws.
