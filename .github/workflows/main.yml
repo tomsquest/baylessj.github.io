@@ -1,7 +1,9 @@
 name: deployment with fancy gems
 
 on:
-  push
+  push:
+    branches: 
+      - master
 
 jobs:
   jekyll:
