@@ -11,12 +11,13 @@ $mobile-max-width: 768px;
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
-  font-size: 16px;
+  font-size: 18px;
   background-color: $dark-background;
   color: $light-text;
   line-height: 24px;
@@ -24,7 +25,12 @@ body {
   border-top: 7px solid $highlight-color;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $light-text;
   font-family: "open sans", sans-serif;
   font-weight: 600;
@@ -60,7 +66,8 @@ a {
   text-decoration: none;
 }
 
-p {
+p,
+li {
   line-height: 1.8rem;
 }
 
@@ -103,10 +110,10 @@ ul.posts li {
 }
 
 ul.posts span {
-  font-family: 'Lucida Console', 'Andale Mono', monospace;
+  font-family: "Lucida Console", "Andale Mono", monospace;
   color: $light-text;
   padding-right: 5px;
-  font-size:14px;
+  font-size: 14px;
 }
 
 .meta {
@@ -121,7 +128,8 @@ ul.posts span {
   overflow: hidden;
 }
 
-nav h1, nav h2 {
+nav h1,
+nav h2 {
   text-align: center;
 }
 
@@ -167,7 +175,7 @@ nav h1, nav h2 {
 #post pre {
   border: 1px solid $accent;
   background-color: $dark-background;
-  padding: 0 .4em;
+  padding: 0 0.4em;
   margin-bottom: 20px !important;
 }
 
@@ -180,7 +188,7 @@ nav h1, nav h2 {
   border: 1px solid $accent;
   background-color: $dark-background;
   font-size: 85%;
-  padding: 0 .2em;
+  padding: 0 0.2em;
 }
 
 #post pre code {
@@ -198,28 +206,28 @@ nav h1, nav h2 {
 
 .sidebar a {
   font-weight: 600;
-  color: $highlight-color; 
+  color: $highlight-color;
 }
 
-@media(min-width: $mobile-max-width) {
-    .content {
-      font: 50 16px/22px "Ubuntu", sans-serif;
-      font-weight: 50;
-      line-height: 1.6;
-      border-left: 1px solid $accent;
-      padding-left: 40px;
-      padding-top: 25px;
-      min-height: 400px;
-    }
+@media (min-width: $mobile-max-width) {
+  .content {
+    font: 50 16px/22px "Ubuntu", sans-serif;
+    font-weight: 50;
+    line-height: 1.6;
+    border-left: 1px solid $accent;
+    padding-left: 40px;
+    padding-top: 25px;
+    min-height: 400px;
+  }
 }
-@media(max-width: $mobile-min-width) {
-    .content {
-      font: 50 16px/22px "Ubuntu", sans-serif;
-      font-weight: 50;
-      line-height: 1.6;
-      padding-top: 25px;
-      min-height: 400px;
-    }
+@media (max-width: $mobile-min-width) {
+  .content {
+    font: 50 16px/22px "Ubuntu", sans-serif;
+    font-weight: 50;
+    line-height: 1.6;
+    padding-top: 25px;
+    min-height: 400px;
+  }
 }
 
 .footer {
@@ -238,19 +246,21 @@ nav h1, nav h2 {
   color: #666;
 }
 
-.home h1, #archive h1 {
+.home h1,
+#archive h1 {
   color: $highlight-color;
-  margin-top: .5em;
-  margin-bottom: .5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
-#logo, #gravatar {
+#logo,
+#gravatar {
   margin-top: 2rem;
   margin-bottom: 25px;
 }
 
 #logo {
-	width: 180px;
+  width: 180px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 15%;
@@ -315,7 +325,7 @@ i.fa-hn {
   margin: 0 auto;
   text-align: center;
   font-size: smaller;
-  padding-bottom: 10px
+  padding-bottom: 10px;
 }
 
 sup {
@@ -338,19 +348,17 @@ sup {
 }
 
 .projects p {
-  margin-top: .5em;
-  margin-bottom: .5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .projects hr {
-  border: .5px dashed $nord3;
+  border: 0.5px dashed $nord3;
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
 .posts li {
-  margin-top: .25em;
-  margin-bottom: .25em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
 }
-
-

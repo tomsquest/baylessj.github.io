@@ -1,16 +1,15 @@
 ---
 layout: post
 tags: [productivity, keyboards]
-categories: []
 #date: 2019-06-25 13:14:15
 #excerpt: ''
 #description:
 #permalink:
-title: 'Alpaca Keyboards Hot Dox Review'
-image: 
+title: "Alpaca Keyboards Hot Dox Review"
+image:
   - src: keyboard1.jpg
-    alt: keyboard photo 
-  - src: keyboard2.jpg 
+    alt: keyboard photo
+  - src: keyboard2.jpg
     alt: tented keyboard macro shot
 ---
 
@@ -25,7 +24,7 @@ The layout of the Hot Dox differs in many ways from a traditional keyboard and, 
 
 #### Ortholinear
 
-An _ortholinear_ keyboard is a keyboard where each of the keys are grouped in straight columns rather than in a staggered layout like a traditional keyboard. In my experience it is a surprisingly different experience to type on an ortholinear keyboard compared to a traditional; the keys are only moved a tiny bit on the keyboard but forcing the keys into perfect columns drastically changed the way my fingers moved to hit most keys. Hitting keys that are not on home row is achieved through a linear movement of the corresponding typing finger and there is no need for a change in hand orientation. 
+An _ortholinear_ keyboard is a keyboard where each of the keys are grouped in straight columns rather than in a staggered layout like a traditional keyboard. In my experience it is a surprisingly different experience to type on an ortholinear keyboard compared to a traditional; the keys are only moved a tiny bit on the keyboard but forcing the keys into perfect columns drastically changed the way my fingers moved to hit most keys. Hitting keys that are not on home row is achieved through a linear movement of the corresponding typing finger and there is no need for a change in hand orientation.
 
 After a couple of months with my Hot Dox I still can't claim to be completely used to this new layout, but it makes a lot more sense than a staggered layout. It seems to me like a milder version of switching to a non-traditional layout like [Dvorak](https://en.m.wikipedia.org/wiki/Dvorak_Simplified_Keyboard)-- while there are pros to the changed layout, one will likely always have times when the have to switch back to a traditional layout. I have not had too hard of a time making the mental switch associated with using a traditional keyboard some times and the ortholinear layout at other times, but it is definitely still noticeable.
 
@@ -48,7 +47,7 @@ You can find my QMK configuration file on my [github](https://github.com/bayless
 
 I made one minor modification to my assembly of the keyboard that has made a decent improvement in my impression of its ergonomics. One popular configuration with split keyboards is a _tented_ configuration where the inside edge of each of the keyboard halves is raised somewhat. This puts your hands at a slight angle, which is a more natural way for them to sit. Some keyboards allow this behavior by default, such as the [Ergodox](https://ergodox-ez.com/), but the Hot Dox does not.
 
-For $4 and a trip to the hardware store, however, I was able to easily achieve some slight tenting to my keyboard. I got a set of 3mm x 16mm button head screw with a 2mm drive and a 3mm - 0.5 hex nut for each of the screws. I replaced the screws holding together the case on the inside corners with these longer screws, adjusted the hex nuts snug against the case, and had a nice tented keyboard setup.
+For \$4 and a trip to the hardware store, however, I was able to easily achieve some slight tenting to my keyboard. I got a set of 3mm x 16mm button head screw with a 2mm drive and a 3mm - 0.5 hex nut for each of the screws. I replaced the screws holding together the case on the inside corners with these longer screws, adjusted the hex nuts snug against the case, and had a nice tented keyboard setup.
 
 ### Overall Impressions
 
